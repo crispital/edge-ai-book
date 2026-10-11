@@ -65,6 +65,6 @@ git_commit 非 null 时按该提交读取文件；否则读取实际工作区文
 
 当前只保存标准 schema、字段说明和记录示例，不实现校验器、不编写测试、不安装开发工具依赖。后续需要自动记录或实际代码验证时，再根据作者要求增加相应实现。
 
-[示例事件](templates/examples/passage-generated.example.json)明确标记 example，相关 prompt.md 与 output.md 是演示资料，未调用 subagent、不属于书稿。初始化阶段没有真实文段生成事件，不为满足 schema 制造一次 AI 撰文。
+[示例事件](templates/examples/passage-generated.example.json)明确标记 example，相关 prompt.md 与 output.md 是演示资料，未调用 subagent、不属于书稿。初始化阶段没有真实文段生成事件。第一周正式提纲任务实际调用的subagent另记于各章ai-records及当日JSONL，不能与示例混用。
 
 多个 subagent 共同形成同一文段时，分别保存生成事件，由整合或改写事件关联全部来源；不要将多人结果登记为一个虚构的 agent。

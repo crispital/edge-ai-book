@@ -6,6 +6,8 @@
 
 | 内容 | 存放位置或入口 |
 | --- | --- |
+| 第一周提纲、清单与README交付包 | [first-week-2026-10-11.md](first-week-2026-10-11.md) |
+| 个人正文组织模板，待审阅 | [templates/section-manuscript.md](templates/section-manuscript.md) |
 | 规范来源、纠正记录及补充约定 | [source-audit-2026-10-11.md](source-audit-2026-10-11.md) |
 | 仓库架构、上传规则及规则依据 | [repository-layout.md](repository-layout.md) |
 | 写作流程、文风与来源核对 | [writing-workflow.md](writing-workflow.md) |
@@ -21,4 +23,4 @@
 | 第三章资料索引 | [references/ch03/00-资料索引.md](references/ch03/00-资料索引.md) |
 | 第四章资料索引 | [references/ch04/00-资料索引.md](references/ch04/00-资料索引.md) |
 
-同一信息只维护一个主文件，其余位置用路径和记录 ID 引用。初始化文件描述保存约定，不代表相关业务、实验或文献调研已经完成。
+同一信息只维护一个主文件，其余位置用路径和记录 ID 引用。规范文件描述保存约定；第一周设计和初步来源阅读不代表业务已选择、正文已确认或项目已经运行。

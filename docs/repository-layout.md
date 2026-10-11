@@ -51,8 +51,6 @@ d2el/
 ├── compatibility/                实际核验的环境与版本矩阵
 ├── assets/ch03|ch04/              图表源文件、导出图及来源
 ├── reports/ch03|ch04/             实验计划、报告与可共享原始记录
-├── scripts/validate_work_log.py   工作日志与文段溯源校验
-├── requirements-dev.txt          仅日志工具依赖
 └── .local/                       私人配置、大数据、模型、缓存、完整输出
 ```
 

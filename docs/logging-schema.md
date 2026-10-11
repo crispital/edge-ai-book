@@ -6,7 +6,7 @@
 
 正式结构化日志保存为 docs/logs/YYYY/MM/YYYY-MM-DD.jsonl，每行一个 JSON 对象。Markdown 日志保留阅读摘要，不代替 JSONL 事件；新记录以 JSONL 为依据。原有初始化 Markdown 记录保留，不猜测缺失时间补造历史事件。
 
-事件 ID 沿用 LYYYYMMDD-序号，跨 Markdown 与 JSONL 使用同一个事件 ID。示例只能放 templates，不可加入正式日志。校验工具会拒绝正式日志中的 example 事件。
+事件 ID 沿用 LYYYYMMDD-序号，跨 Markdown 与 JSONL 使用同一个事件 ID。示例只能放 templates，不可加入正式日志。
 
 ## 必须能够回答什么
 
@@ -24,7 +24,7 @@
 | 后续改写从哪里来 | related_event_ids，与原始生成事件关联 |
 | 做了哪些检查、哪些没做 | checks，分别标 passed/failed/not_run |
 
-schema 校验保证字段与证据文件关系，不证明记录中声称的调用真实发生，也不代替作者核验。
+schema 规定字段、类型和必填条件；快照校验值用于后续核对内容，不能单凭填了字段就证明调用真实发生，也不代替作者核验。
 
 ## 文段生成记录
 
@@ -57,20 +57,11 @@ passage_revised 保存改写后的快照及目标文段，必须关联原事件�
 
 git_commit 非 null 时按该提交读取文件；否则读取实际工作区文件。工作输出若是会继续修改的普通文档，先记录产出路径，提交后用 handoff 事件绑定提交与校验值；不要把可变工作文件当作不可变快照。
 
-受限资料可以使用 local_only，路径仍为相对仓库的 .local/...；完整证据模式需合法取得这些文件。共享场景缺证据可使用 metadata-only，但结论只能写元信息检查，不得称证据校验完成。
+受限资料可以使用 local_only，路径仍为相对仓库的 .local/...；核对完整证据时需合法取得这些文件。缺少证据时只描述元信息，不得称内容已核验。
 
-## 使用校验工具
+## 当前搭建范围
 
-在对应机器自己的 Python 环境安装开发工具依赖：
-校验工具需要 Python 3.10 或以上；这个要求只用于开发工具，不是已选定的训练版本。
-```text
-python -m pip install -r requirements-dev.txt
-python scripts/validate_work_log.py docs/templates/examples/passage-generated.example.json
-python scripts/validate_work_log.py docs/logs/2026/10/2026-10-11.jsonl
-python scripts/test_work_log.py
-```
-
-以上命令同样适用于 Linux 与 Windows；不复制另一系统的虚拟环境。只查字段时增加 --metadata-only。默认还检查提示词与输入快照、输出快照、文段标记与校验值；target 已绑定 Git 提交时核对该版稿件。
+当前只保存标准 schema、字段说明和记录示例，不实现校验器、不编写测试、不安装开发工具依赖。后续需要自动记录或实际代码验证时，再根据作者要求增加相应实现。
 
 [示例事件](templates/examples/passage-generated.example.json)明确标记 example，相关 prompt.md 与 output.md 是演示资料，未调用 subagent、不属于书稿。初始化阶段没有真实文段生成事件，不为满足 schema 制造一次 AI 撰文。
 

@@ -7,8 +7,6 @@
 !/README.md
 !/CONTRIBUTING.md
 !/CHANGELOG.md
-!/requirements-dev.txt
-!/scripts/
 !/.github/
 !/docs/
 !/03-transfer-learning/

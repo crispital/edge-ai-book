@@ -25,7 +25,7 @@
 - 图表使用两位章、节号及流水号；可编辑源文件与导出图片一起提交。
 - UTF-8、LF 换行；Markdown 的行尾双空格按需要保留。
 - 日志、卡片和 AI 记录按 [记录规范](docs/records.md) 命名。
-- JSONL 工作事件及文段来源按 [日志 schema 说明](docs/logging-schema.md) 保存并校验。
+- JSONL 工作事件及文段来源按 [日志 schema 说明](docs/logging-schema.md) 保存；框架阶段不增加测试或校验代码。
 
 ## 一次提交
 

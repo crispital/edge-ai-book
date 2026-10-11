@@ -10,6 +10,9 @@
 *.txt text eol=lf
 *.svg text eol=lf
 *.mmd text eol=lf
+*.jsonl text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
 *.png binary
 *.jpg binary
 *.jpeg binary

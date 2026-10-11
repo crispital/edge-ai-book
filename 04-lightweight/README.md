@@ -12,6 +12,8 @@
 
 待登记 PC 的 CPU、内存、操作系统、运行软件版本、线程设置及输入条件。模型与依赖尚未获得和验证；依赖文件在最小实现确认后添加。
 
+本作者 PC 基线使用 Windows 本机 CPU，接收 AutoDL Linux 训练端的固定模型交接包。规范见 [跨平台说明](../docs/cross-platform.md)；configs/windows-cpu-baseline.example.json 是待实现配置结构，不包含已确定的计时阈值或实测结果。
+
 ## 目录
 
 - src/：本作者基线度量的核心实现。

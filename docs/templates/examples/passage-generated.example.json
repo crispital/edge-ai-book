@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "record_kind": "example",
+  "event_id": "L20261011-99",
+  "event_type": "passage_generated",
+  "recorded_at": "2026-10-11T00:00:00+08:00",
+  "started_at": "2026-10-11T00:00:00+08:00",
+  "completed_at": "2026-10-11T00:00:00+08:00",
+  "actor": {
+    "kind": "subagent",
+    "name": "schema示例，未运行",
+    "agent_id": "example-subagent-not-run",
+    "model": {
+      "requested": {
+        "name": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fast_mode": false
+      },
+      "actual": {
+        "name": null,
+        "reasoning_effort": null,
+        "fast_mode": null
+      }
+    }
+  },
+  "task": {
+    "section": "3.1",
+    "summary": "schema示例，不是实际生成事件"
+  },
+  "git": {
+    "branch": "feature/03-02-黄章磊",
+    "base_commit": null
+  },
+  "prompt": {
+    "run_id": "example-not-run",
+    "template_id": "E",
+    "template_version": "v0.1",
+    "full_prompt": {
+      "path": "docs/templates/examples/prompt.md",
+      "sha256": "e34de069336259ad255d3233f529b74c07e3811dd7f7f25a9da8f45c9e401d4e",
+      "hash_mode": "sha256_utf8_lf",
+      "git_commit": null,
+      "visibility": "repository"
+    }
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "snapshot": {
+        "path": "docs/templates/examples/output.md",
+        "sha256": "43dbd073cd4dda97de1408115a4e30ccc71848276869657e26ba1e546e1c8c75",
+        "hash_mode": "sha256_utf8_lf",
+        "git_commit": null,
+        "visibility": "repository"
+      },
+      "target": {
+        "path": "docs/templates/examples/output.md",
+        "block_id": "demo-paragraph-001",
+        "text_sha256": "2a40087bdf8270b7786e7c592fbb5f371b59b08184c5d199f2f447f8103820c5",
+        "git_commit": null
+      }
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "reviewed_at": null,
+    "record_path": null
+  },
+  "checks": [],
+  "related_event_ids": [],
+  "notes": [
+    "所有agent身份和时间值只演示字段格式；未调用subagent。"
+  ]
+}

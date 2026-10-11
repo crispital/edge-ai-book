@@ -14,6 +14,8 @@
 - [迁移学习项目 README 框架](03-transfer-learning/README.md)
 - [模型基线项目 README 框架](04-lightweight/README.md)
 - [本次初始化日志](docs/logs/2026/10/2026-10-11.md)
+- [JSON日志schema与文段溯源](docs/logging-schema.md)
+- [AutoDL Linux训练与Windows CPU测试](docs/cross-platform.md)
 
 ## 开发入口
 

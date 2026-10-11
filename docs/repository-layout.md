@@ -27,9 +27,12 @@ d2el/
 │   ├── writing-workflow.md
 │   ├── agent-policy.md
 │   ├── records.md
+│   ├── logging-schema.md
+│   ├── cross-platform.md
+│   ├── schemas/work-event.schema.json
 │   ├── prompts/writing-prompts.md
 │   ├── templates/records.md
-│   ├── logs/YYYY/MM/YYYY-MM-DD.md  工作日志与产出链接
+│   ├── logs/YYYY/MM/YYYY-MM-DD.jsonl  结构化事件；.md为阅读摘要
 │   ├── ch03/                     正文、提纲、清单、小节工作笔记
 │   ├── ch04/
 │   └── references/ch03|ch04/
@@ -48,6 +51,8 @@ d2el/
 ├── compatibility/                实际核验的环境与版本矩阵
 ├── assets/ch03|ch04/              图表源文件、导出图及来源
 ├── reports/ch03|ch04/             实验计划、报告与可共享原始记录
+├── scripts/validate_work_log.py   工作日志与文段溯源校验
+├── requirements-dev.txt          仅日志工具依赖
 └── .local/                       私人配置、大数据、模型、缓存、完整输出
 ```
 
@@ -77,3 +82,5 @@ d2el/
 业务数据及类别表与代码分开，用配置指定路径；仓库文件只使用相对路径或可配置路径。固定测试集用文件清单和校验值标识；类别顺序、前后处理或模型变更必须关联受影响的小节与验证记录。
 
 初始化不选择 Python/PyTorch 版本，不加入真实训练配置，不生成目标板代码。环境和依赖由实际开发验证后登记，避免将计划写成可运行承诺。
+
+开发角色按作者补充明确为 AutoDL Linux 训练、Windows 本机运行测试；设备、数据路径和依赖分离，细则见 [cross-platform.md](cross-platform.md)。已添加的 .example.json 是配置结构示例，尚无模型程序或环境兼容性实测。

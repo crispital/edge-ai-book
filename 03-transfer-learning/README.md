@@ -19,6 +19,8 @@
 
 环境记录与模型兼容性存放 compatibility。初始化不提供未经验证的安装命令，也不预设 CUDA 是运行前提。
 
+开发训练使用 AutoDL Linux，运行与摄像头测试使用 Windows 本机 CPU。跨平台路径、设备、权重加载、依赖及交接规范见 [跨平台说明](../docs/cross-platform.md)，实际状态见 [环境矩阵](../compatibility/environment-matrix.md)。configs 已提供两个明确标为示例的环境配置，尚无程序读取它们执行任务。
+
 ## 目录
 
 - src/：数据读取、模型适配及其他核心实现。

@@ -9,6 +9,8 @@
 | subagent 与模型策略 | [agent-policy.md](agent-policy.md) |
 | 指南公共提示词与 A—K 模板 | [prompts/writing-prompts.md](prompts/writing-prompts.md) |
 | 日志与资料卡的归档规则 | [records.md](records.md) |
+| JSON工作日志schema及文段溯源 | [logging-schema.md](logging-schema.md) |
+| Linux训练、Windows测试与CPU/GPU约定 | [cross-platform.md](cross-platform.md) |
 | 任务、来源、实验、模型、检查及 AI 记录模板 | [templates/records.md](templates/records.md) |
 | 本次初始化日志 | [logs/2026/10/2026-10-11.md](logs/2026/10/2026-10-11.md) |
 | 第三章正文与小节工作笔记 | [ch03/README.md](ch03/README.md) |

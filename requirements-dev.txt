@@ -1,0 +1,2 @@
+# 仅用于日志 JSON Schema 校验，不是模型训练依赖。
+jsonschema==4.26.0

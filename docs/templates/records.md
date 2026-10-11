@@ -168,6 +168,8 @@ output.md 保存实际原始输出，不在本模板中预填生成内容。
 
 ## 当日工作日志
 
+以下是 Markdown 阅读摘要模板。正式 JSONL 事件按 [日志 schema](../logging-schema.md) 填写，不以摘要替代字段化文段溯源。
+
 ```markdown
 ## LYYYYMMDD-01 · [本次工作]
 任务范围与输入版本：

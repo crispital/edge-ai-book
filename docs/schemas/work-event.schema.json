@@ -1,0 +1,589 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:d2el:schema:work-event:1.0.0",
+  "title": "d2el 工作与文段生成事件",
+  "description": "一条 JSON 对象对应一个事件；正式日志使用 JSONL，示例必须标记 example。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_kind",
+    "event_id",
+    "event_type",
+    "recorded_at",
+    "started_at",
+    "completed_at",
+    "actor",
+    "task",
+    "git",
+    "prompt",
+    "inputs",
+    "outputs",
+    "review",
+    "checks",
+    "related_event_ids",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_kind": {
+      "enum": [
+        "actual",
+        "example"
+      ]
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^L[0-9]{8}-[0-9]{2,}$"
+    },
+    "event_type": {
+      "enum": [
+        "work",
+        "passage_generated",
+        "passage_revised",
+        "verification",
+        "handoff"
+      ]
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "started_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "completed_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "actor": {
+      "$ref": "#/$defs/actor"
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section",
+        "summary"
+      ],
+      "properties": {
+        "section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "branch",
+        "base_commit"
+      ],
+      "properties": {
+        "branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "prompt": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/prompt"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/output"
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "record_path"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not_applicable",
+            "unreviewed",
+            "author_confirmed",
+            "rejected"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "record_path": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "result",
+          "evidence"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "enum": [
+              "passed",
+              "failed",
+              "not_run"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "related_event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "hash_mode",
+        "git_commit",
+        "visibility"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "hash_mode": {
+          "enum": [
+            "sha256_utf8_lf",
+            "sha256_bytes"
+          ]
+        },
+        "git_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "visibility": {
+          "enum": [
+            "repository",
+            "local_only"
+          ]
+        }
+      }
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "name",
+        "agent_id",
+        "model"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "primary_agent",
+            "subagent",
+            "human",
+            "system"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agent_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/model"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested",
+        "actual"
+      ],
+      "properties": {
+        "requested": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "reasoning_effort",
+            "fast_mode"
+          ],
+          "properties": {
+            "name": {
+              "enum": [
+                "gpt-6.1-sol",
+                "gpt-6-astra"
+              ]
+            },
+            "reasoning_effort": {
+              "const": "medium"
+            },
+            "fast_mode": {
+              "const": false
+            }
+          }
+        },
+        "actual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "reasoning_effort",
+            "fast_mode"
+          ],
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reasoning_effort": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fast_mode": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "template_id",
+        "template_version",
+        "full_prompt"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "template_id": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "ad-hoc"
+          ]
+        },
+        "template_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "full_prompt": {
+          "$ref": "#/$defs/artifact"
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "snapshot",
+        "target"
+      ],
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/artifact"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "block_id",
+                "text_sha256",
+                "git_commit"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+                },
+                "block_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"
+                },
+                "text_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "git_commit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[a-f0-9]{40}$"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "passage_generated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          },
+          "actor": {
+            "properties": {
+              "kind": {
+                "const": "subagent"
+              },
+              "agent_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "model": {
+                "$ref": "#/$defs/model"
+              }
+            }
+          },
+          "prompt": {
+            "$ref": "#/$defs/prompt"
+          },
+          "outputs": {
+            "minItems": 1,
+            "items": {
+              "properties": {
+                "target": {
+                  "$ref": "#/$defs/output/properties/target/anyOf/0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "review": {
+            "properties": {
+              "status": {
+                "const": "author_confirmed"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "review": {
+            "properties": {
+              "reviewer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reviewed_at": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+              },
+              "record_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "passage_revised"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "related_event_ids": {
+            "minItems": 1
+          },
+          "outputs": {
+            "minItems": 1,
+            "items": {
+              "properties": {
+                "target": {
+                  "$ref": "#/$defs/output/properties/target/anyOf/0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

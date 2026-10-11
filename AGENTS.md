@@ -8,6 +8,8 @@
 - 调用写作助手：`docs/prompts/writing-prompts.md`。
 - 工作日志、任务卡、资料卡、实验与审查记录：`docs/records.md`、`docs/templates/records.md`。
 - subagent、模型与任务交接：`docs/agent-policy.md`。
+- 工作事件和文段溯源：`docs/schemas/work-event.schema.json`、`docs/logging-schema.md`。
+- AutoDL Linux 训练、Windows 测试及 CPU/GPU：`docs/cross-platform.md`。
 
 先读实际文件，不把文件名、摘要或另一个 agent 的说法当作已读证据。原始团队文件与参考书可能只在作者本地存在；缺文件时依据已入库 SPEC 与规范开展可确定的工作，说明缺口。
 
@@ -27,6 +29,8 @@ MobileNetV2 是当前预训练分类基线；业务场景、类别、数据规�
 
 代码放对应项目的 `src/`、`scripts/`、`configs/`；先完成最小可运行路径，再按实际复用需求提取 `common/`。路径和设备参数可配置，不引入未经选择的依赖或空实现。代码与正文使用同一模型、类别表及前后处理版本。
 
+训练开发在 AutoDL Linux，运行链路和 PC CPU 基线在 Windows 本机。按 docs/cross-platform.md 分离设备配置、环境依赖与实际证据；禁止硬编码 CUDA、盘符或实例路径，禁止将 GPU 权重默认加载到本机不存在的 CUDA 设备。
+
 修改已有内容前查看状态，不覆盖作者或其他 agent 的未提交工作。只做与当前任务有关的改动。文件版本、图名、分支名按 `CONTRIBUTING.md`。
 
 ## Subagent 与模型
@@ -40,6 +44,8 @@ MobileNetV2 是当前预训练分类基线；业务场景、类别、数据规�
 ## 完成与归档
 
 每个实质工作批次更新当日日志，链接实际产出、检查与缺口；卡片放规定位置，不重复填多份相同内容。保存实际提示词、输入版本、输出和确认状态。
+
+当日日志以 JSONL 事件为结构化依据，按 work-event.schema.json 校验；Markdown 为阅读摘要。每段 subagent 生成文本必须记录真实起止时间、agent ID、请求与已知实际模型设置、完整填充提示词快照及 SHA256、输出快照、稳定文段 block ID 和文本 SHA256、目标路径及稿件版本。改写后新增事件关联旧事件，不覆盖原始溯源。没有实际 subagent 的任务不得伪造 passage_generated 事件。
 
 提交前检查差异、引用路径、文件名、应忽略的大文件及敏感信息。运行与检查只报告实际执行结果。仅在作者明确授权的远端推送；不擅自给负责人发消息。
 

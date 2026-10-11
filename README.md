@@ -6,6 +6,7 @@
 
 ## 从这里开始
 
+- [开发者 HTML 导览](docs/developer-guide.html)：目录地图、功能安排、跨平台分工与记录去向，可离线打开。
 - [个人工作 SPEC](第一阶段/docs/SPEC.md)
 - [文档与记录入口](docs/README.md)
 - [目录、上传范围与扩展规则](docs/repository-layout.md)

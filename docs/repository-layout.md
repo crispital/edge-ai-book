@@ -20,6 +20,7 @@ d2el/
 ├── .github/pull_request_template.md
 ├── 第一阶段/
 │   ├── README.md
+│   ├── developer-guide.html       开发者离线导览，规范快照
 │   └── docs/SPEC.md               个人工作范围，单一依据
 ├── docs/
 │   ├── README.md

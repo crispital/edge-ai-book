@@ -2,6 +2,8 @@
 
 先读取 [个人 SPEC](../第一阶段/docs/SPEC.md)，再按本次任务选择资料。
 
+需要快速了解结构时，先打开 [开发者 HTML 导览](developer-guide.html)。它是规范快照，不自动读取实时进度；具体任务仍以相应文档为准。
+
 | 内容 | 存放位置或入口 |
 | --- | --- |
 | 仓库架构、上传规则及规则依据 | [repository-layout.md](repository-layout.md) |

@@ -2,6 +2,8 @@
 
 ## 格式与文件
 
+JSON Schema是使用的标准；事件字段、JSONL归档、ID和文段标记是按作者溯源要求设计的项目约定，不是指南提供的日志标准。
+
 采用 [JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12)，项目 schema 为 [work-event.schema.json](schemas/work-event.schema.json)，版本 1.0.0。
 
 正式结构化日志保存为 docs/logs/YYYY/MM/YYYY-MM-DD.jsonl，每行一个 JSON 对象。Markdown 日志保留阅读摘要，不代替 JSONL 事件；新记录以 JSONL 为依据。原有初始化 Markdown 记录保留，不猜测缺失时间补造历史事件。

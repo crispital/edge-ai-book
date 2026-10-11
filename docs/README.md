@@ -6,6 +6,7 @@
 
 | 内容 | 存放位置或入口 |
 | --- | --- |
+| 规范来源、纠正记录及补充约定 | [source-audit-2026-10-11.md](source-audit-2026-10-11.md) |
 | 仓库架构、上传规则及规则依据 | [repository-layout.md](repository-layout.md) |
 | 写作流程、文风与来源核对 | [writing-workflow.md](writing-workflow.md) |
 | subagent 与模型策略 | [agent-policy.md](agent-policy.md) |

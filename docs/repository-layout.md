@@ -20,10 +20,10 @@ d2el/
 ├── .github/pull_request_template.md
 ├── 第一阶段/
 │   ├── README.md
-│   ├── developer-guide.html       开发者离线导览，规范快照
 │   └── docs/SPEC.md               个人工作范围，单一依据
 ├── docs/
 │   ├── README.md
+│   ├── developer-guide.html       开发者离线导览，规范快照
 │   ├── repository-layout.md
 │   ├── writing-workflow.md
 │   ├── agent-policy.md
@@ -58,6 +58,8 @@ d2el/
 空的代码项目子目录用 .gitkeep 保留，不创建假代码或未经选择的依赖文件。图表、报告和资料目录有自己的 README 或索引。其他作者的项目和后续阶段目录按实际接入需求添加，不提前创建空壳。
 
 ## 上传边界
+
+本节上传白名单、全部originals本地保存及.local布局是个人仓库补充约定。指南只禁止上传无权公开的资料，并未规定所有原资料不得入库；这里的统一本地保存策略更严格，索引必须说明合法获取方式。两位编号、Git短标题、单一工作版本、JSONL与卡片ID也属于项目补充，不能称为指南原文。依据核查见[核查记录](source-audit-2026-10-11.md)。
 
 | 材料 | 是否上传 | 保存方式 |
 | --- | --- | --- |

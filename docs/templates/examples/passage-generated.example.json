@@ -24,11 +24,11 @@
     }
   },
   "task": {
-    "section": "2.8",
+    "section": "2.7",
     "summary": "schema示例，不是实际生成事件"
   },
   "git": {
-    "branch": "feature/02-08-黄章磊",
+    "branch": "feature/02-07-导出示例",
     "base_commit": null
   },
   "prompt": {

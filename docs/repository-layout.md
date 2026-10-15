@@ -1,89 +1,24 @@
-# 仓库架构与上传范围
-
-## 采用的依据与本次决定
-
-采用个人 SPEC，以及现行分工计划 7.1—7.3、8.1—8.2 的目录、项目包和命名要求。新手指南用于写作流程、文风、资料保存、提示词和检查记录；其中过时的章号和 `04-model-zoo/` 映射不沿用。
-
-2026-10-15个人任务已调整为2.8、2.9、4.1，当前入口为docs/current-tasks.md。02-onnx-baseline沿用原分工目录名称。原始依据在作者本地 `SPEC/`，参考专著在 `参考/`，均不直接上传。本仓库保存个人 SPEC 和本次需要的操作规范，不把全部团队任务复制为个人任务。
-
-已读取 WR-CIRF 的根目录、docs 目录及 .gitignore。借鉴“子项目集中存放源码、docs 存放说明、inputs/outputs 不入库”的做法；本书已规定的目录与分支命名优先，不复制其算法项目结构。
-
-选择根目录 AGENTS.md 作为自动读取的规则入口，详细流程和提示词放 docs。当前无跨项目复用的独立操作，不创建 skill；以后若出现重复执行且需要脚本支持的独立流程，再抽取 skill，仍引用现有规范，不复制一份规则。
-
-## 目录
+# 仓库结构与上传范围
 
 ```text
-d2el/
-├── AGENTS.md
-├── README.md / CONTRIBUTING.md / CHANGELOG.md
-├── .gitignore / .gitattributes / .editorconfig
-├── .github/pull_request_template.md
-├── 第一阶段/
-│   ├── README.md
-│   └── docs/SPEC.md               个人工作范围，单一依据
-├── docs/
-│   ├── README.md
-│   ├── developer-guide.html       开发者离线导览，规范快照
-│   ├── repository-layout.md
-│   ├── writing-workflow.md
-│   ├── agent-policy.md
-│   ├── records.md
-│   ├── logging-schema.md
-│   ├── cross-platform.md
-│   ├── schemas/work-event.schema.json
-│   ├── prompts/writing-prompts.md
-│   ├── templates/records.md
-│   ├── logs/YYYY/MM/YYYY-MM-DD.jsonl  结构化事件；.md为阅读摘要
-│   ├── ch02/                     正文、提纲、清单、小节工作笔记
-│   ├── ch04/
-│   └── references/ch02|ch04/
-│       ├── 00-资料索引.md
-│       ├── notes/                来源卡、阅读笔记
-│       ├── ai-records/           实际提示词、输入、输出、确认记录
-│       └── originals/            本地原始资料，忽略、不上传
+edge-ai-book/
+├── 第一阶段/docs/SPEC.md
 ├── 02-onnx-baseline/
-│   ├── README.md
-│   ├── src/ / scripts/ / configs/
-│   ├── samples/ / expected_outputs/ / docs/
-│   └── requirements.txt等         实现并确定依赖后添加
-├── 04-lightweight/                同样的项目包结构；个人当前负责4.1
-├── common/                       有真实复用需求后放公共代码
-├── datasets/                     数据说明、清单、划分、合法获取脚本
-├── compatibility/                实际核验的环境与版本矩阵
-├── assets/ch02|ch04/              图表源文件、导出图及来源
-├── reports/ch02|ch04/             实验计划、报告与可共享原始记录
-└── .local/                       私人配置、大数据、模型、缓存、完整输出
+│   ├── src/          模型与可复用实现
+│   ├── scripts/      导出和检查入口
+│   ├── docs/         模型版本与接口说明
+│   └── samples/      可共享的小样例或清单
+├── docs/
+│   ├── ch02/         2.6、2.7提纲与正文
+│   ├── references/ch02/
+│   └── logs/
+├── assets/ch02/      图表及可编辑源文件
+├── reports/ch02/     实验计划、报告与可共享证据
+├── datasets/         数据来源与清单说明
+├── compatibility/    环境版本记录
+└── common/           出现真实复用需求后提取的公共代码
 ```
 
-docs/references/ch03/仅保留旧AI快照与资料记录供历史追溯，不再承载当前任务。历史日志中的路径按当时Git版本解释。
+完整数据、权重、ONNX、运行输出、缓存、虚拟环境和本机配置由`.gitignore`排除。仓库相对路径使用正斜线；代码不硬编码盘符或用户目录。
 
-空的代码项目子目录用 .gitkeep 保留，不创建假代码或未经选择的依赖文件。图表、报告和资料目录有自己的 README 或索引。其他作者的项目和后续阶段目录按实际接入需求添加，不提前创建空壳。
-
-## 上传边界
-
-本节上传白名单、全部originals本地保存及.local布局是个人仓库补充约定。指南只禁止上传无权公开的资料，并未规定所有原资料不得入库；这里的统一本地保存策略更严格，索引必须说明合法获取方式。两位编号、Git提交首行格式、单一工作版本、JSONL与卡片ID也属于项目补充，不能称为指南原文。提交首行现按作者要求采用`YYYYMMDD | 中文事件`，见[提交规范](../CONTRIBUTING.md)。初始约定及纠错经过见[核查记录](source-audit-2026-10-11.md)。
-
-| 材料 | 是否上传 | 保存方式 |
-| --- | --- | --- |
-| 个人 SPEC、正文、提纲、计划、模板、工作日志 | 是 | 指定文档目录 |
-| 自编代码、共享配置、依赖说明、合法获取脚本 | 是 | 项目目录 |
-| 可编辑图表、成图、体积可控且许可明确的小样例 | 是 | assets 或项目 samples |
-| 可共享实验日志、命令、结果摘要、清单和校验值 | 是 | reports，提交前核对内容 |
-| 提示词、输入说明、AI 输出、作者确认版本 | 是，限可共享内容 | ai-records；受限输入只记录路径、版本和校验值 |
-| 原参考书、原始网页存档、团队原文件 | 否 | 本地参考目录或 originals，索引记录合法获取位置 |
-| 完整数据、权重、ONNX、视频、缓存、构建产物 | 否 | .local 或忽略的 outputs；用清单和获取方法交接 |
-| 凭据、私有设备信息、受限SDK或未经授权资料 | 否 | 本地受控位置；仓库只保存可共享说明 |
-
-.gitignore 使用根目录白名单，再排除已允许目录中的缓存、大文件与凭据。新增目录要同时更新本文件和 .gitignore。不要新增另一个 data/、logs/ 或 manuscript/ 根目录来存已有类型材料。
-
-大文件被忽略不代表无需保存。资料索引和实验报告必须说明实际保管位置、版本、许可、校验值和获取方式；其他人仅克隆仓库后不一定能拿到这些文件。
-
-## 代码扩展原则
-
-先在对应项目内实现数据读取、训练、导出和推理路径。发现两个真实消费者后再考虑 common；不把仅用于一个项目的函数包装成全书框架。
-
-数据及类别表与代码分开，用配置指定路径；仓库文件只使用相对路径或可配置路径。固定测试集用文件清单和校验值标识；类别顺序、前后处理或模型变更必须关联受影响的小节与验证记录。
-
-初始化不选择 Python/PyTorch 版本，不加入真实训练配置，不生成目标板代码。环境和依赖由实际开发验证后登记，避免将计划写成可运行承诺。
-
-开发角色按作者补充明确为 AutoDL Linux 训练、Windows 本机运行测试；设备、数据路径和依赖分离，细则见 [cross-platform.md](cross-platform.md)。已添加的 .example.json 是配置结构示例，尚无模型程序或环境兼容性实测。
+当前仓库独立维护，唯一远程为`https://github.com/crispital/edge-ai-book.git`。原克隆仓库不作为upstream，也不参与后续合并流程。

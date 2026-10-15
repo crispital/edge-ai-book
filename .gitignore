@@ -1,4 +1,4 @@
-# 根目录白名单：增加新目录时，先更新 docs/repository-layout.md。
+# 根目录白名单
 /*
 !/.gitignore
 !/.gitattributes
@@ -10,7 +10,6 @@
 !/.github/
 !/docs/
 !/02-onnx-baseline/
-!/04-lightweight/
 !/common/
 !/datasets/
 !/compatibility/
@@ -18,20 +17,15 @@
 !/reports/
 !/第一阶段/
 
-# 第一阶段只保留阶段入口与已确认的个人 SPEC；正文及过程记录使用统一 docs。
 /第一阶段/*
 !/第一阶段/README.md
 !/第一阶段/docs/
 /第一阶段/docs/*
 !/第一阶段/docs/SPEC.md
 
-# 原参考专著、原始团队文件和本地工作材料不上传。
-/参考/
-/SPEC/
+# 本地资料与依赖
 /.local/
 **/originals/
-
-# 本地依赖、编辑器与缓存。
 **/.venv/
 **/venv/
 **/node_modules/
@@ -46,7 +40,9 @@
 **/.DS_Store
 **/Thumbs.db
 
-# 训练、构建及运行产生的大文件。
+# 数据、模型与运行产物
+**/data/
+**/model/
 **/outputs/
 **/runs/
 **/checkpoints/
@@ -55,12 +51,9 @@
 **/*.pt
 **/*.pth
 **/*.onnx
-**/*.rknn
 **/*.bin
 **/*.npy
 **/*.npz
-**/*.mp4
-**/*.avi
 **/*.zip
 **/*.7z
 **/*.tar
@@ -70,7 +63,7 @@
 **/*.so
 **/*.pdf
 
-# 凭据、私人笔记、临时文件。
+# 凭据与临时文件
 **/.env
 **/.env.*
 !**/.env.example

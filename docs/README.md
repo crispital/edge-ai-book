@@ -1,27 +1,16 @@
 # 文档入口
 
-先读取 [个人 SPEC](../第一阶段/docs/SPEC.md)，再按本次任务选择资料。
+先读取[当前SPEC](../第一阶段/docs/SPEC.md)，再按任务选择：
 
-需要快速了解结构时，先打开 [开发者 HTML 导览](developer-guide.html)。它是规范快照，不自动读取实时进度；具体任务仍以相应文档为准。
-
-| 内容 | 存放位置或入口 |
+| 内容 | 入口 |
 | --- | --- |
-| 当前任务、提纲及README | [current-tasks.md](current-tasks.md) |
-| 历史第一周材料（旧范围） | [first-week-2026-10-11.md](first-week-2026-10-11.md) |
-| 个人正文组织模板，待审阅 | [templates/section-manuscript.md](templates/section-manuscript.md) |
-| 规范来源、纠正记录及补充约定 | [source-audit-2026-10-11.md](source-audit-2026-10-11.md) |
-| 仓库架构、上传规则及规则依据 | [repository-layout.md](repository-layout.md) |
-| 写作流程、文风与来源核对 | [writing-workflow.md](writing-workflow.md) |
-| subagent 与模型策略 | [agent-policy.md](agent-policy.md) |
-| 指南公共提示词与 A—K 模板 | [prompts/writing-prompts.md](prompts/writing-prompts.md) |
-| 日志与资料卡的归档规则 | [records.md](records.md) |
-| JSON工作日志schema及文段溯源 | [logging-schema.md](logging-schema.md) |
-| Linux训练、Windows测试与CPU/GPU约定 | [cross-platform.md](cross-platform.md) |
-| 任务、来源、实验、模型、检查及 AI 记录模板 | [templates/records.md](templates/records.md) |
-| 本次初始化日志 | [logs/2026/10/2026-10-11.md](logs/2026/10/2026-10-11.md) |
-| 第二章正文与小节工作笔记 | [ch02/README.md](ch02/README.md) |
-| 第四章正文与小节工作笔记 | [ch04/README.md](ch04/README.md) |
+| 2.6与2.7任务 | [current-tasks.md](current-tasks.md) |
+| 第二章材料 | [ch02/README.md](ch02/README.md) |
 | 第二章资料索引 | [references/ch02/00-资料索引.md](references/ch02/00-资料索引.md) |
-| 第四章资料索引 | [references/ch04/00-资料索引.md](references/ch04/00-资料索引.md) |
+| 仓库结构 | [repository-layout.md](repository-layout.md) |
+| 写作流程 | [writing-workflow.md](writing-workflow.md) |
+| 记录规则 | [records.md](records.md) |
+| JSONL日志格式 | [logging-schema.md](logging-schema.md) |
+| 本地环境边界 | [cross-platform.md](cross-platform.md) |
 
-同一信息只维护一个主文件，其余位置用路径和记录 ID 引用。规范文件描述保存约定；提纲和源码阅读不代表正文已确认或项目已经运行。
+同一事实只维护一个主入口，其他文件使用链接引用。资料阅读、代码存在和模型实际运行是三种不同状态。

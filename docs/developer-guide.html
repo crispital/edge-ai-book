@@ -36,27 +36,26 @@
 <a href="#collaboration">Agent 与 Git</a>
 <a href="#documents">文档快捷入口</a>
 </nav>
-<div class="sidebar-bottom">第一阶段 · 黄章磊<br>规范快照：2026-10-11<br>离线 HTML · 无外部依赖<a href="../README.md">仓库 README ↗</a><a href="https://github.com/dixiLOG/d2el" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a></div>
+<div class="sidebar-bottom">第一阶段 · 黄章磊<br>规范快照：2026-10-15<br>离线 HTML · 无外部依赖<a href="../README.md">仓库 README ↗</a><a href="https://github.com/dixiLOG/d2el" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a></div>
 </aside>
 <main class="main" id="main">
 <header id="overview">
 <div class="eyebrow">DEVELOPER GUIDE / PHASE 01</div>
 <h1>先看懂项目，再开始工作。</h1>
 <p class="note">提交说明采用指南八项原文；日志结构、上传白名单和CPU基线等含项目补充约定。查看<a href="source-audit-2026-10-11.md">来源核查与纠正记录</a>。</p>
-<p class="intro">这页说明每类材料放在哪里、四个小节怎样衔接，以及从 Linux 训练到 Windows 运行的交接方式。路径均相对于仓库根目录。</p>
-<div class="status"><strong>当前状态：开发框架与第一周设计材料已形成。</strong><p>四节提纲、图表/代码需求清单及项目 README 框架见<a href="first-week-2026-10-11.md">第一周交付入口</a>；业务案例、数据集、正文、训练与推理实现尚待开展。这是一份静态导览，不读取实时进度。</p></div>
+<p class="intro">这页说明每类材料放在哪里、三个小节怎样衔接，以及从 Linux 训练到 Windows 运行的交接方式。路径均相对于仓库根目录。</p>
+<div class="status"><strong>当前状态：开发框架与第一周设计材料已形成。</strong><p>三节提纲、图表/代码需求清单及项目 README 框架见<a href="current-tasks.md">当前任务入口</a>；已确定官方MNIST基准；正文、前序模型交付与推理实现尚待开展。这是一份静态导览，不读取实时进度。</p></div>
 <div class="links"><a href="../第一阶段/docs/SPEC.md">先读个人 SPEC ↗</a><a href="../CONTRIBUTING.md">提交要求 ↗</a><a href="repository-layout.md">完整目录规范 ↗</a></div>
 </header>
 
 <section class="section" aria-labelledby="scope-title">
-<div class="section-head"><span class="num">01</span><div><h2 id="scope-title">你的四个小节，怎样接起来</h2><p class="section-desc">工作范围以个人 SPEC 为准，项目目录承载各节共用的工程。</p></div></div>
+<div class="section-head"><span class="num">01</span><div><h2 id="scope-title">你的三个小节，怎样接起来</h2><p class="section-desc">工作范围以个人 SPEC 为准，项目目录承载各节共用的工程。</p></div></div>
 <div class="scope">
-<div class="scope-row"><div class="section-no">3.1</div><div><h3>从 MNIST 到真实业务任务</h3><p>把业务需求转成类别、数据范围、分类任务和验收目标。</p></div><div class="result">教学与真实数据对照表 · 自有 RGB 图像分类项目流程图<br><span class="tag pending">业务场景待商议</span></div></div>
-<div class="scope-row"><div class="section-no">3.2</div><div><h3>自有 RGB 数据与迁移学习</h3><p>围绕 MobileNetV2，完成数据组织、训练、评价、导出和摄像头验证。</p></div><div class="result">迁移学习项目 · 划分记录 · 固定测试集 · 模型交接包<br><code>03-transfer-learning/</code></div></div>
-<div class="scope-row"><div class="section-no">3.3</div><div><h3>任务指标与业务指标</h3><p>讲清评价口径，将任务错误关联到业务后果和验收要求。</p></div><div class="result">任务指标表 · 混淆矩阵及错误示例 · 业务验收模板<br><span class="tag">规范与说明</span></div></div>
-<div class="scope-row"><div class="section-no">4.1</div><div><h3>为什么需要轻量化</h3><p>接收 3.2 自有模型，用 PC 基线与资源预算解释压缩目标。</p></div><div class="result">参数量、文件大小、PC 耗时基线报告 · 资源预算表<br><code>04-lightweight/</code></div></div>
+<div class="scope-row"><div class="section-no">2.8</div><div><h3>ONNX Runtime基线推理</h3><p>承接2.7导出，使用同一固定输入对比PyTorch与Runtime输出。</p></div><div class="result">推理及对比代码 · 固定样本与真实结果<br><code>02-onnx-baseline/</code></div></div>
+<div class="scope-row"><div class="section-no">2.9</div><div><h3>面向硬件部署的模型接口</h3><p>整理模型来源、输入输出及前后处理。</p></div><div class="result">模型接口模板 · MNIST示例<br><span class="tag">接口与说明</span></div></div>
+<div class="scope-row"><div class="section-no">4.1</div><div><h3>为什么需要轻量化</h3><p>使用同一MNIST模型，结合资源预算解释开销与压缩目标。</p></div><div class="result">基线报告 · 资源预算与压缩目标表<br><code>04-lightweight/</code></div></div>
 </div>
-<p class="scope-note">3.3 的说明与模板不自动扩展成所有任务的评测实现；4.1 不自动承担其他作者的压缩方法。分类模型与测试口径向后续章节交接，检测、跟踪等项目有各自的模型与接口。</p>
+<p class="scope-note">2.8承接前序训练与2.7导出；2.9复用同一模型；4.1详细度量方法对齐4.2。硬件效果需后续实测。</p>
 </section>
 
 <section class="section" id="directories" aria-labelledby="directories-title">
@@ -66,7 +65,7 @@
 <div class="directory-list" id="directory-list" aria-label="项目目录">
 <button class="directory-item" type="button" data-key="spec" aria-pressed="false"><span><span class="path">第一阶段/docs/SPEC.md</span><span class="hint">个人任务范围</span></span><span class="tag">已建立</span></button>
 <button class="directory-item" type="button" data-key="docs" aria-pressed="true"><span><span class="path">docs/</span><span class="hint">正文、规则、提示词与卡片</span></span><span class="tag">已建立</span></button>
-<button class="directory-item" type="button" data-key="transfer" aria-pressed="false"><span><span class="path">03-transfer-learning/</span><span class="hint">分类与迁移学习工程</span></span><span class="tag pending">骨架</span></button>
+<button class="directory-item" type="button" data-key="transfer" aria-pressed="false"><span><span class="path">02-onnx-baseline/</span><span class="hint">ONNX基线与模型接口</span></span><span class="tag pending">骨架</span></button>
 <button class="directory-item" type="button" data-key="lightweight" aria-pressed="false"><span><span class="path">04-lightweight/</span><span class="hint">4.1 模型与 PC 基线</span></span><span class="tag pending">骨架</span></button>
 <button class="directory-item" type="button" data-key="references" aria-pressed="false"><span><span class="path">docs/references/</span><span class="hint">资料索引、来源卡、AI 输入输出</span></span><span class="tag">已建立</span></button>
 <button class="directory-item" type="button" data-key="logs" aria-pressed="false"><span><span class="path">docs/logs/</span><span class="hint">JSONL 工作事件与阅读摘要</span></span><span class="tag">已有记录</span></button>
@@ -80,9 +79,9 @@
 </div>
 <div class="directory-detail" id="directory-detail" aria-live="polite" aria-atomic="true">
 <span class="tag">已建立</span><h3 class="large-path">docs/</h3><p>写作与协作的统一入口。正文、计划和过程记录有固定去向，代码留在对应项目中。</p>
-<ul><li><code>ch03/</code> 与 <code>ch04/</code>：小节正文、提纲、插图及代码清单、工作笔记。</li><li><code>prompts/</code>：指南公共说明及 A—K 提示词。</li><li><code>templates/</code>：任务、来源、实验、模型与检查记录模板。</li><li><code>schemas/</code>：JSON 工作事件的标准字段定义。</li></ul>
-<div class="path-box"><pre>docs/ch03/03-01-黄章磊-v0.1.md
-docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正文与工作笔记尚未创建。</small></div>
+<ul><li><code>ch02/</code> 与 <code>ch04/</code>：小节正文、提纲、插图及代码清单、工作笔记。</li><li><code>prompts/</code>：指南公共说明及 A—K 提示词。</li><li><code>templates/</code>：任务、来源、实验、模型与检查记录模板。</li><li><code>schemas/</code>：JSON 工作事件的标准字段定义。</li></ul>
+<div class="path-box"><pre>docs/ch02/02-08-黄章磊-v0.1.md
+docs/ch02/02-08-黄章磊-工作记录.md</pre><small>正文尚未创建；任务卡与提纲见当前任务入口。</small></div>
 <div class="detail-foot"><a href="README.md">查看文档入口 ↗</a></div>
 </div>
 </div>
@@ -92,9 +91,9 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <section class="section" id="workflow" aria-labelledby="workflow-title">
 <div class="section-head"><span class="num">03</span><div><h2 id="workflow-title">一次工作，留下哪些材料</h2><p class="section-desc">先围绕具体问题准备材料，再推进写作或开发。</p></div></div>
 <div class="route">
-<div class="route-step"><h3>界定任务</h3><p>读 SPEC，明确本节问题、输入依赖、输出与当前缺口。</p><code>docs/ch03|ch04/<br>小节工作记录</code></div>
-<div class="route-step"><h3>调研与形成提纲</h3><p>实际读来源，保存资料与笔记，再组织提纲及图表、代码需求。</p><code>docs/references/<br>docs/ch03|ch04/</code></div>
-<div class="route-step"><h3>写作与实现</h3><p>按确认材料写正文；在对应项目开发，图表保存可编辑源文件。</p><code>03-transfer-learning/<br>04-lightweight/ · assets/</code></div>
+<div class="route-step"><h3>界定任务</h3><p>读 SPEC，明确本节问题、输入依赖、输出与当前缺口。</p><code>docs/ch02|ch04/<br>小节工作记录</code></div>
+<div class="route-step"><h3>调研与形成提纲</h3><p>实际读来源，保存资料与笔记，再组织提纲及图表、代码需求。</p><code>docs/references/<br>docs/ch02|ch04/</code></div>
+<div class="route-step"><h3>写作与实现</h3><p>按确认材料写正文；在对应项目开发，图表保存可编辑源文件。</p><code>02-onnx-baseline/<br>04-lightweight/ · assets/</code></div>
 <div class="route-step"><h3>记录与交接</h3><p>把实际产出关联到日志、来源、模型及稿件版本，再按提交规范交付。</p><code>docs/logs/ · reports/<br>CONTRIBUTING.md</code></div>
 </div>
 <p class="note"><strong>当前第一周：</strong>后续需要形成小节提纲、插图清单、代码清单和项目 README 框架。此导览展示安排，不表示提纲、正文或实验已经完成。框架阶段不添加测试、校验器或开发环境安装。</p>
@@ -103,9 +102,9 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <section class="section" id="platforms" aria-labelledby="platforms-title">
 <div class="section-head"><span class="num">04</span><div><h2 id="platforms-title">两台机器，共用一份项目</h2><p class="section-desc">共享代码与模型约定，分别维护各自的环境和本地文件。</p></div></div>
 <div class="platforms">
-<div class="machine"><span class="tag">开发与训练侧</span><h3>AutoDL · Linux</h3><ul><li>数据组织与迁移学习开发。</li><li>训练、保存权重、导出 ONNX。</li><li>NVIDIA GPU 实例明确配置 CUDA 设备。</li><li>实际系统、显卡与软件版本待登记。</li></ul><div class="config">03-transfer-learning/configs/<br>linux-autodl-train.example.json</div></div>
+<div class="machine"><span class="tag">开发与训练侧</span><h3>AutoDL · Linux</h3><ul><li>前序MNIST开发与训练。</li><li>训练、保存权重、导出 ONNX。</li><li>NVIDIA GPU 实例明确配置 CUDA 设备。</li><li>实际系统、显卡与软件版本待登记。</li></ul><div class="config">02-onnx-baseline/configs/<br>linux-autodl-train.example.json</div></div>
 <div class="handoff"><span>固定版本</span><span class="arrow" aria-hidden="true">→</span><span>模型交接包</span></div>
-<div class="machine"><span class="tag">运行与基线侧</span><h3>本地主机 · Windows</h3><ul><li>固定输入与参考输出对照。</li><li>CPU 推理和摄像头链路运行。</li><li>4.1 的 PC CPU 耗时基线。</li><li>AMD 显卡不作为当前 CPU 路径的依赖。</li></ul><div class="config">03-transfer-learning/configs/<br>windows-cpu-test.example.json</div></div>
+<div class="machine"><span class="tag">运行与基线侧</span><h3>本地主机 · Windows</h3><ul><li>固定输入与参考输出对照。</li><li>固定样本CPU推理与输出核对。</li><li>4.1 的 PC CPU 耗时基线。</li><li>AMD 显卡不作为当前 CPU 路径的依赖。</li></ul><div class="config">02-onnx-baseline/configs/<br>windows-cpu-test.example.json</div></div>
 </div>
 <div class="handoff-list"><strong>交接的不只是模型文件</strong>权重与 ONNX及其外部数据 · SHA256 · 类别顺序 · 前后处理 · 固定样本及参考输出 · 代码提交与环境版本 · 已知限制。</div>
 <p class="note">路径使用仓库相对路径；两台机器分别安装环境。配置示例尚无执行程序；CPU 结果只代表对应 PC 条件。<a href="cross-platform.md">阅读完整跨平台规范 ↗</a></p>
@@ -116,10 +115,10 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <div class="trace"><h3>这段文字，是谁在何时怎样生成的？</h3><div class="chain"><span>时间 + subagent ID</span><b aria-hidden="true">→</b><span>实际提示词 + SHA256</span><b aria-hidden="true">→</b><span>原始输出快照</span><b aria-hidden="true">→</b><span>文段 ID + SHA256</span><b aria-hidden="true">→</b><span>稿件路径 + 版本</span></div><p>记录请求模型与已知实际设置，未知值保留 null。后续改写新增事件关联原事件；没有真实调用，就不填写生成记录。</p></div>
 <div class="table-wrap"><table class="records-table scroll-table"><thead><tr><th scope="col">你要找什么</th><th scope="col">去哪里找</th><th scope="col">怎么关联</th></tr></thead><tbody>
 <tr><td>工作日志</td><td><code>docs/logs/YYYY/MM/YYYY-MM-DD.jsonl</code></td><td>L 事件 ID；同名 Markdown 为阅读摘要</td></tr>
-<tr><td>任务卡、缺口与修改意见</td><td><code>docs/ch03|ch04/小节工作记录.md</code></td><td>每节一份工作笔记，避免重复台账</td></tr>
-<tr><td>来源卡、资料笔记</td><td><code>docs/references/ch03|ch04/notes/</code></td><td>S 来源 ID，索引定位原资料与引用位置</td></tr>
-<tr><td>实际提示词与 AI 输出</td><td><code>docs/references/ch03|ch04/ai-records/A记录ID/</code></td><td><code>input.md</code> / <code>output.md</code> / <code>review.md</code></td></tr>
-<tr><td>实验计划与执行证据</td><td><code>reports/ch03|ch04/E记录ID/</code></td><td>plan、report、原始记录；大输出另列保管位置</td></tr>
+<tr><td>任务卡、缺口与修改意见</td><td><code>docs/ch02|ch04/小节工作记录.md</code></td><td>每节一份工作笔记，避免重复台账</td></tr>
+<tr><td>来源卡、资料笔记</td><td><code>docs/references/ch02|ch04/notes/</code></td><td>S 来源 ID，索引定位原资料与引用位置</td></tr>
+<tr><td>实际提示词与 AI 输出</td><td><code>docs/references/ch02|ch04/ai-records/A记录ID/</code></td><td><code>input.md</code> / <code>output.md</code> / <code>review.md</code></td></tr>
+<tr><td>实验计划与执行证据</td><td><code>reports/ch02|ch04/E记录ID/</code></td><td>plan、report、原始记录；大输出另列保管位置</td></tr>
 </tbody></table></div>
 <div class="links"><a href="logging-schema.md">字段与文段定位说明 ↗</a><a href="schemas/work-event.schema.json">JSON Schema ↗</a><a href="templates/examples/passage-generated.example.json">明确标记的记录示例 ↗</a><a href="templates/records.md">卡片模板 ↗</a></div>
 </section>
@@ -128,7 +127,7 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <div class="section-head"><span class="num">06</span><div><h2 id="collaboration-title">Agent 与 Git 各管什么</h2><p class="section-desc">规则入口保持简短，详细流程按任务读取。</p></div></div>
 <div class="rules">
 <div class="rule-block"><h3>Agent：按材料与提示词工作</h3><p><code>AGENTS.md</code> 是入口，详细要求在 <code>docs/</code>。当前不另建 skill，避免重复维护。</p><ul><li>常规任务：<code>gpt-6.1-sol / medium</code>。</li><li>复杂调度可用 <code>gpt-6-astra / medium</code>；禁止 Fast。</li><li>后续 AI 撰文调用带明确提示词与材料的 subagent。</li><li>指定文件所有权，有依赖的任务串行。</li><li>运行设置需实际确认，文档本身不负责切换模型。</li></ul><a href="../AGENTS.md">入口规则 ↗</a> · <a href="agent-policy.md">分工策略 ↗</a></div>
-<div class="rule-block"><h3>Git：版本、范围与提交</h3><p>当前初始化位于 <code>feature/03-02-黄章磊</code>；正式开始 3.1 时使用对应分支，不复制工程。</p><div class="branch"><code>feature/03-01-黄章磊</code><code>feature/03-02-黄章磊</code><code>feature/03-03-黄章磊</code><code>feature/04-01-黄章磊</code></div><p class="note">这些是分支命名安排，不表示四条分支都已创建。稳定与集成分支在实际流程需要时建立。</p><a href="../CONTRIBUTING.md">提交要求 ↗</a> · <a href="../.github/pull_request_template.md">合并请求模板 ↗</a></div>
+<div class="rule-block"><h3>Git：版本、范围与提交</h3><p>任务分支按当前章、节命名；已有历史分支不自动改名。</p><div class="branch"><code>feature/02-08-黄章磊</code><code>feature/02-09-黄章磊</code><code>feature/04-01-黄章磊</code></div><p class="note">这些是分支命名安排，不表示三条分支都已创建。稳定与集成分支在实际流程需要时建立。</p><a href="../CONTRIBUTING.md">提交要求 ↗</a> · <a href="../.github/pull_request_template.md">合并请求模板 ↗</a></div>
 </div>
 <div class="handoff-list"><strong>上传代码、文档和必要证据；完整数据与模型本地保存</strong><code>.gitignore</code> 控制上传范围，<code>.gitattributes</code> 统一文本换行及二进制处理。原参考书、原始团队文件、完整数据、权重、视频、缓存和凭据不直接上传；用清单、版本、校验值和合法获取方式交接。</div>
 </section>
@@ -136,7 +135,7 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <section class="section" id="documents" aria-labelledby="documents-title">
 <div class="section-head"><span class="num">07</span><div><h2 id="documents-title">按问题找文档</h2><p class="section-desc">导览只提供定位；具体工作始终以对应规范和个人 SPEC 为依据。</p></div></div>
 <div class="library">
-<a href="../第一阶段/docs/SPEC.md"><div>我到底负责什么？<small>四个小节的知识点与产出</small></div><span class="external" aria-hidden="true">↗</span></a>
+<a href="../第一阶段/docs/SPEC.md"><div>我到底负责什么？<small>三个小节的知识点与产出</small></div><span class="external" aria-hidden="true">↗</span></a>
 <a href="repository-layout.md"><div>这个文件应该放在哪里？<small>目录架构与上传边界</small></div><span class="external" aria-hidden="true">↗</span></a>
 <a href="writing-workflow.md"><div>先调研还是先写正文？<small>写作步骤、文风与引用</small></div><span class="external" aria-hidden="true">↗</span></a>
 <a href="prompts/writing-prompts.md"><div>这一轮该用什么提示词？<small>公共说明与 A—K 模板</small></div><span class="external" aria-hidden="true">↗</span></a>
@@ -152,14 +151,14 @@ docs/ch03/03-01-黄章磊-工作记录.md</pre><small>命名示例；这些正�
 <script>
 "use strict";
 const directoryData={
-spec:{status:"已建立",path:"第一阶段/docs/SPEC.md",description:"个人工作范围的单一依据。保留3.1、3.2、3.3、4.1的知识点、撰写要求和配套产出。",items:["开始任务前先读它，避免把其他作者的工作纳入个人范围。","业务场景、数据规模、工具版本和阈值尚未确定时保持未指定。","阶段目录只提供入口，不在里面另复制一套代码工程。"],example:"第一阶段/docs/SPEC.md",note:"已有文件。",href:"../第一阶段/docs/SPEC.md",link:"打开个人 SPEC"},
-docs:{status:"已建立",path:"docs/",description:"写作与协作的统一入口。正文、计划和过程记录有固定去向，代码留在对应项目中。",items:["ch03/与ch04/：正文、提纲、插图及代码清单、工作笔记。","prompts/：指南公共说明及A—K提示词。","templates/：任务、来源、实验、模型与检查记录模板。","schemas/：JSON工作事件的标准字段定义。"],example:"docs/ch03/03-01-黄章磊-v0.1.md\ndocs/ch03/03-01-黄章磊-工作记录.md",note:"命名示例；这些正文与工作笔记尚未创建。",href:"README.md",link:"查看文档入口"},
-transfer:{status:"工程骨架，尚无实现",path:"03-transfer-learning/",description:"3.2 的自有 RGB 分类工程，也是3.1业务需求说明与3.3分类示例的配套项目。",items:["src/放核心实现；scripts/放训练、导出、运行入口。","configs/已有Linux训练与Windows CPU测试的配置示例。","samples/放许可明确的小样例；expected_outputs/放真实参考输出。","docs/放接口、模型卡、限制与交接说明；当前只有目录占位。"],example:"src/ · scripts/ · configs/\nsamples/ · expected_outputs/ · docs/",note:"README框架已建立。依赖与实际命令随实现补齐。",href:"../03-transfer-learning/README.md",link:"查看项目 README"},
-lightweight:{status:"工程骨架，尚无实现",path:"04-lightweight/",description:"当前个人工作仅为4.1：接收3.2模型，度量参数量、模型文件大小和PC CPU耗时。",items:["与4.2的公共度量与报告口径对接。","资源预算及压缩目标依实际要求形成，不填写假指标。","统计与计时实现放本项目，报告放reports/ch04/。","其他压缩方法与综合实验由相应作者负责。"],example:"04-lightweight/configs/\nwindows-cpu-baseline.example.json",note:"配置中的计时条件尚未确定，不是可运行承诺。",href:"../04-lightweight/README.md",link:"查看项目 README"},
-references:{status:"索引与目录已建立",path:"docs/references/",description:"保存来源索引、阅读笔记和AI任务快照，让知识与文字来源可以定位。",items:["按ch03、ch04分章，00-资料索引.md是检索入口。","notes/可在一个笔记文件中保存多张来源卡。","ai-records/按A记录ID保存input、output与review。","originals/保存原资料，属于本地忽略目录，需记录合法获取方式。"],example:"docs/references/ch03/\n  00-资料索引.md\n  notes/\n  ai-records/\n  originals/（本地约定）",note:"目前没有正式技术来源卡或真实subagent生成记录。",href:"references/ch03/00-资料索引.md",link:"查看第三章资料索引"},
+spec:{status:"已建立",path:"第一阶段/docs/SPEC.md",description:"个人工作范围的单一依据。明确2.8、2.9、4.1的知识点、边界和配套产出。",items:["开始任务前先读它，避免把其他作者的工作纳入个人范围。","采用官方MNIST示例；权重、导出文件、环境及误差阈值待实际对齐。","阶段目录只提供入口，不在里面另复制一套代码工程。"],example:"第一阶段/docs/SPEC.md",note:"已有文件。",href:"../第一阶段/docs/SPEC.md",link:"打开个人 SPEC"},
+docs:{status:"已建立",path:"docs/",description:"写作与协作的统一入口。正文、计划和过程记录有固定去向，代码留在对应项目中。",items:["ch02/与ch04/：正文、提纲、插图及代码清单、工作笔记。","prompts/：指南公共说明及A—K提示词。","templates/：任务、来源、实验、模型与检查记录模板。","schemas/：JSON工作事件的标准字段定义。"],example:"docs/ch02/02-08-黄章磊-v0.1.md\ndocs/ch02/02-08-黄章磊-工作记录.md",note:"正文尚未创建；任务卡与提纲见当前任务入口。",href:"README.md",link:"查看文档入口"},
+transfer:{status:"工程骨架，尚无实现",path:"02-onnx-baseline/",description:"2.8基线推理与2.9模型接口的配套工程，承接前序MNIST训练和导出。",items:["src/放核心实现；scripts/放训练、导出、运行入口。","configs/已有Linux训练与Windows CPU测试的配置示例。","samples/放许可明确的小样例；expected_outputs/放真实参考输出。","docs/放接口、模型卡、限制与交接说明；当前只有目录占位。"],example:"src/ · scripts/ · configs/\nsamples/ · expected_outputs/ · docs/",note:"README框架已建立。依赖与实际命令随实现补齐。",href:"../02-onnx-baseline/README.md",link:"查看项目 README"},
+lightweight:{status:"工程骨架，尚无实现",path:"04-lightweight/",description:"当前个人工作仅为4.1：沿用2.8的MNIST模型，度量参数量、模型文件大小和PC CPU耗时。",items:["与4.2的公共度量与报告口径对接。","资源预算及压缩目标依实际要求形成，不填写假指标。","统计与计时实现放本项目，报告放reports/ch04/。","其他压缩方法与综合实验由相应作者负责。"],example:"04-lightweight/configs/\nwindows-cpu-baseline.example.json",note:"配置中的计时条件尚未确定，不是可运行承诺。",href:"../04-lightweight/README.md",link:"查看项目 README"},
+references:{status:"索引与目录已建立",path:"docs/references/",description:"保存来源索引、阅读笔记和AI任务快照，让知识与文字来源可以定位。",items:["按ch02、ch04分章，00-资料索引.md是检索入口。","notes/可在一个笔记文件中保存多张来源卡。","ai-records/按A记录ID保存input、output与review。","originals/保存原资料，属于本地忽略目录，需记录合法获取方式。"],example:"docs/references/ch02/\n  00-资料索引.md\n  notes/\n  ai-records/\n  originals/（本地约定）",note:"已有来源笔记与AI记录；历史ch03记录仅用于追溯。",href:"references/ch02/00-资料索引.md",link:"查看第二章资料索引"},
 logs:{status:"已有框架工作记录",path:"docs/logs/",description:"按日期保存结构化工作事件。JSONL每行一个事件，Markdown提供阅读摘要。",items:["记录实际时间、执行者、任务、材料版本与产出。","实际subagent文段生成使用passage_generated事件。","提示词、输出快照、文段ID及校验值一起关联。","后续修改追加关联事件，不覆盖原始来源。"],example:"docs/logs/2026/10/2026-10-11.jsonl\ndocs/logs/2026/10/2026-10-11.md",note:"已有记录是框架搭建与范围调整，不代表书稿或训练完成。",href:"logging-schema.md",link:"查看日志字段说明"},
-assets:{status:"目录已建，图表待产出",path:"assets/",description:"书稿与README图表的主保存位置。成图、可编辑源文件和来源说明放在一起。",items:["按ch03与ch04分章。","原创或重绘图表保留来源与图注。","概念示意标清示意，性能图关联真实实验。","不把原图只存聊天，也不只保留不可编辑截图。"],example:"assets/ch03/fig_03_01_01_含义.png\nassets/ch03/fig_03_01_01_含义.svg",note:"文件名示例；当前尚无实际插图。",href:"../assets/ch03/README.md",link:"查看图表目录说明"},
-reports:{status:"目录已建，实验待开展",path:"reports/",description:"保存正式实验计划、报告和可共享的原始证据。工作日志只引用这里的主记录。",items:["按E记录ID建实验目录，区分计划与实际执行。","记录代码、数据、模型、环境和计时边界。","成功与失败均保存，不用最好的一次截图代替原始记录。","大输出留在.local/runs/，报告保存文件清单及获取方式。"],example:"reports/ch03/E03-02-日期-序号/\n  plan.md\n  report.md\n  raw/",note:"这是后续保存约定，当前没有模型实验记录。",href:"../reports/ch03/README.md",link:"查看实验目录说明"},
+assets:{status:"目录已建，图表待产出",path:"assets/",description:"书稿与README图表的主保存位置。成图、可编辑源文件和来源说明放在一起。",items:["按ch02与ch04分章。","原创或重绘图表保留来源与图注。","概念示意标清示意，性能图关联真实实验。","不把原图只存聊天，也不只保留不可编辑截图。"],example:"assets/ch02/fig_02_08_01_含义.png\nassets/ch02/fig_02_08_01_含义.svg",note:"文件名示例；当前尚无实际插图。",href:"../assets/ch02/README.md",link:"查看图表目录说明"},
+reports:{status:"目录已建，实验待开展",path:"reports/",description:"保存正式实验计划、报告和可共享的原始证据。工作日志只引用这里的主记录。",items:["按E记录ID建实验目录，区分计划与实际执行。","记录代码、数据、模型、环境和计时边界。","成功与失败均保存，不用最好的一次截图代替原始记录。","大输出留在.local/runs/，报告保存文件清单及获取方式。"],example:"reports/ch02/E02-08-日期-序号/\n  plan.md\n  report.md\n  raw/",note:"这是后续保存约定，当前没有模型实验记录。",href:"../reports/ch02/README.md",link:"查看实验目录说明"},
 datasets:{status:"数据集尚未选择",path:"datasets/",description:"保存数据的说明与清单，而非完整采集图片和视频。",items:["记录来源、许可、类别映射与版本。","保存稳定样本ID、采集分组和数据划分清单。","完整数据在本机.local/datasets/，小样例在项目samples/。","固定测试集随模型交接，不随意改变划分。"],example:"datasets/：组织说明、清单、划分\n.local/datasets/：完整图片与视频",note:"业务对象、类别与采集规模尚待讨论。",href:"../datasets/README.md",link:"查看数据目录说明"},
 compatibility:{status:"角色已定义，版本待登记",path:"compatibility/",description:"分别记录AutoDL Linux训练环境和Windows本机运行环境的实际版本及证据。",items:["记录系统、CPU/GPU、框架、驱动及实际device/providers。","区分计划、文档支持、实际运行与输出正确。","模型、固定输入与代码提交一起登记。","不把某台机器的依赖列表直接作为另一系统的安装配置。"],example:"compatibility/environment-matrix.md",note:"当前矩阵界定角色，尚未锁定模型环境。",href:"../compatibility/environment-matrix.md",link:"查看环境矩阵"},
 common:{status:"目录已建，无公共实现",path:"common/",description:"只保存真正跨项目复用的前后处理、评价、日志与工具代码。",items:["先在实际项目内实现最小路径。","出现真实复用需求后再提取公共接口。","记录谁在使用、接口是什么、影响哪些项目。","工作日志和任务卡属于docs，不在这里存放。"],example:"common/：按实际复用需求增加模块",note:"当前不要为尚未发生的复用构造通用框架。",href:"../common/README.md",link:"查看公共代码约定"},

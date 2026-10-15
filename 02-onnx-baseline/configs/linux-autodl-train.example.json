@@ -1,0 +1,20 @@
+{
+  "profile": "linux-autodl-train",
+  "status": "configuration_example_only",
+  "stage": "train",
+  "device": "cuda:0",
+  "strict_device": true,
+  "precision": "float32",
+  "dataloader": {
+    "num_workers": 0
+  },
+  "paths": {
+    "dataset_root": ".local/datasets/mnist",
+    "model_root": ".local/models",
+    "run_root": ".local/runs"
+  },
+  "notes": [
+    "配置结构示例，尚无程序读取或模型运行结果。",
+    "前序MNIST训练/导出与2.8推理使用同一模型；版本、设备和误差条件需实际登记。"
+  ]
+}

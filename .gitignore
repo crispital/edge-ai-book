@@ -9,7 +9,7 @@
 !/CHANGELOG.md
 !/.github/
 !/docs/
-!/03-transfer-learning/
+!/02-onnx-baseline/
 !/04-lightweight/
 !/common/
 !/datasets/

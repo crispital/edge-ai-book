@@ -1,0 +1,25 @@
+{
+  "profile": "windows-cpu-test",
+  "status": "configuration_example_only",
+  "stage": "test",
+  "device": "cpu",
+  "strict_device": true,
+  "precision": "float32",
+  "onnx_runtime": {
+    "providers": [
+      "CPUExecutionProvider"
+    ]
+  },
+  "dataloader": {
+    "num_workers": 0
+  },
+  "paths": {
+    "dataset_root": ".local/datasets/mnist",
+    "model_root": ".local/models",
+    "run_root": ".local/runs"
+  },
+  "notes": [
+    "配置结构示例，尚无程序读取或模型运行结果。",
+    "前序MNIST训练/导出与2.8推理使用同一模型；版本、设备和误差条件需实际登记。"
+  ]
+}

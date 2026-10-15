@@ -6,7 +6,8 @@
 
 | 内容 | 存放位置或入口 |
 | --- | --- |
-| 第一周提纲、清单与README交付包 | [first-week-2026-10-11.md](first-week-2026-10-11.md) |
+| 当前任务、提纲及README | [current-tasks.md](current-tasks.md) |
+| 历史第一周材料（旧范围） | [first-week-2026-10-11.md](first-week-2026-10-11.md) |
 | 个人正文组织模板，待审阅 | [templates/section-manuscript.md](templates/section-manuscript.md) |
 | 规范来源、纠正记录及补充约定 | [source-audit-2026-10-11.md](source-audit-2026-10-11.md) |
 | 仓库架构、上传规则及规则依据 | [repository-layout.md](repository-layout.md) |
@@ -18,9 +19,9 @@
 | Linux训练、Windows测试与CPU/GPU约定 | [cross-platform.md](cross-platform.md) |
 | 任务、来源、实验、模型、检查及 AI 记录模板 | [templates/records.md](templates/records.md) |
 | 本次初始化日志 | [logs/2026/10/2026-10-11.md](logs/2026/10/2026-10-11.md) |
-| 第三章正文与小节工作笔记 | [ch03/README.md](ch03/README.md) |
+| 第二章正文与小节工作笔记 | [ch02/README.md](ch02/README.md) |
 | 第四章正文与小节工作笔记 | [ch04/README.md](ch04/README.md) |
-| 第三章资料索引 | [references/ch03/00-资料索引.md](references/ch03/00-资料索引.md) |
+| 第二章资料索引 | [references/ch02/00-资料索引.md](references/ch02/00-资料索引.md) |
 | 第四章资料索引 | [references/ch04/00-资料索引.md](references/ch04/00-资料索引.md) |
 
-同一信息只维护一个主文件，其余位置用路径和记录 ID 引用。规范文件描述保存约定；第一周设计和初步来源阅读不代表业务已选择、正文已确认或项目已经运行。
+同一信息只维护一个主文件，其余位置用路径和记录 ID 引用。规范文件描述保存约定；提纲和源码阅读不代表正文已确认或项目已经运行。

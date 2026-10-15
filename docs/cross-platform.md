@@ -1,6 +1,6 @@
 # Linux 训练与 Windows 测试
 
-本项目当前采用作者指定的两台环境：AutoDL Linux 开发与训练，Windows 本地主机运行链路、摄像头及 PC 基线测试。本节是后续实现约束，尚未证明模型已在任一环境运行。
+本项目当前采用作者指定的两台环境：AutoDL Linux 开发与训练，Windows 本地主机固定输入推理及 PC 基线测试。本节是后续实现约束，尚未证明模型已在任一环境运行。
 
 ## 环境角色
 
@@ -8,18 +8,18 @@
 
 | 环境 | 用途 | 设备策略 |
 | --- | --- | --- |
-| AutoDL Linux | 数据与模型开发、迁移学习、导出、训练侧验证 | 如实际实例为 NVIDIA GPU，显式配置 cuda:0；型号、驱动与 CUDA 构建版本需实际登记 |
-| Windows 本地主机 | 固定输入对照、CPU 推理、摄像头链路、PC CPU 耗时 | 显式配置 cpu，ONNX Runtime 使用 CPUExecutionProvider |
+| AutoDL Linux | 前序MNIST训练与导出开发、训练侧验证 | 如实际实例为 NVIDIA GPU，显式配置 cuda:0；型号、驱动与 CUDA 构建版本需实际登记 |
+| Windows 本地主机 | 固定输入对照、CPU 推理、PC CPU 耗时 | 显式配置 cpu，ONNX Runtime 使用 CPUExecutionProvider |
 | Linux CPU | 可选的功能检查路径 | 显式配置 cpu；不把功能验证当作 GPU 性能验证 |
 
 AMD 显卡不是 Windows 测试的必需依赖。若以后启用其加速后端，应作为另一个配置和验证范围，不能悄悄改变当前 CPU 基线。
 
 配置示例在：
-- [Linux AutoDL 训练](../03-transfer-learning/configs/linux-autodl-train.example.json)
-- [Windows CPU 测试](../03-transfer-learning/configs/windows-cpu-test.example.json)
+- [Linux AutoDL 训练](../02-onnx-baseline/configs/linux-autodl-train.example.json)
+- [Windows CPU 测试](../02-onnx-baseline/configs/windows-cpu-test.example.json)
 - [Windows CPU 基线](../04-lightweight/configs/windows-cpu-baseline.example.json)
 
-这些文件只是配置结构示例，尚无程序读取它们执行训练或测试。业务类别、学习率、训练轮次、输入尺寸及实验阈值不在初始化中填入。
+这些文件只是配置结构示例，尚无程序读取它们执行训练或测试。模型与前处理以固定官方代码和前序交付为准；环境、导出参数及误差阈值待实际核对。
 
 ## 路径与代码
 
@@ -27,7 +27,7 @@ AMD 显卡不是 Windows 测试的必需依赖。若以后启用其加速后端�
 
 两台机器的完整数据、模型、日志分别保存到各自 .local。共享配置不能包含 Windows 盘符、AutoDL 实例绝对路径、账号或 IP；本机覆盖参数用 CLI 或 .local 中的本地配置。不要复制 Windows venv、Linux 二进制或整套环境文件夹。
 
-核心步骤用 Python 入口，避免核心逻辑只存在于 Bash/PowerShell。需要 shell 包装时分别说明 Linux 与 PowerShell 命令。Linux 文件名大小写、Windows spawn 多进程和摄像头设备选择都应进入实际验证。
+核心步骤用 Python 入口，避免核心逻辑只存在于 Bash/PowerShell。需要 shell 包装时分别说明 Linux 与 PowerShell 命令。Linux 文件名大小写、Windows spawn 多进程都应进入实际验证。
 
 Windows 可执行入口使用 if __name__ == "__main__" 保护。DataLoader 的 dataset/collate/worker 函数应为可导入的顶层定义；跨平台最小路径从 num_workers=0 开始，之后按实测增加。这些约束对应 [PyTorch 多进程加载说明](https://docs.pytorch.org/docs/2.14/data.html#platform-specific-behaviors)。
 
@@ -45,13 +45,13 @@ Windows CPU ONNX 测试显式指定 CPUExecutionProvider；GPU 侧如需 ONNX �
 
 从训练机器交给 Windows 的包至少包含：
 - 权重、ONNX 及实际存在的 ONNX 外部数据文件，逐文件 SHA256。
-- 模型架构与预训练来源、类别表及类别顺序。
+- 模型架构与源码/权重来源、类别表及类别顺序。
 - 输入输出名称、形状、dtype、颜色、布局、Resize/裁剪/归一化、后处理。
 - 固定测试样本清单及可获得的文件，参考输出及其实际生成环境。
 - 训练与导出 Git 提交、数据划分版本、工具版本、模型信息卡和关联实验 ID。
 - 合法获取与存放方式；未验证、失败及限制。
 
-只移动结果包与元信息，不移动 .local 私人配置。接收机器先核对校验值、类别和前后处理，再运行固定输入对照，最后接摄像头。若接口或类别变化，重新验证受影响步骤。
+只移动结果包与元信息，不移动 .local 私人配置。接收机器先核对校验值、类别和前后处理，再运行固定输入对照。若接口或类别变化，重新验证受影响步骤。
 
 ## 环境与依赖记录
 
@@ -61,6 +61,6 @@ Windows CPU ONNX 测试显式指定 CPUExecutionProvider；GPU 侧如需 ONNX �
 
 ## 验证边界
 
-先分别检查 Windows CPU 和 Linux 训练侧最小路径，再执行同一交接包的固定输入对照。GPU 计时注意异步计算与同步点；CPU 记录线程、预热、重复次数及计时范围。摄像头采集、前处理、模型、后处理和显示分开记录。
+先分别检查 Windows CPU 和 Linux 训练侧最小路径，再执行同一交接包的固定输入对照。GPU 计时注意异步计算与同步点；CPU 记录线程、预热、重复次数及计时范围。前处理、模型推理和后处理的计时边界分别记录。
 
-当前框架与配置示例不证明链路已运行；后续训练、CPU 推理和摄像头运行情况另存实际 E 记录。
+当前框架与配置示例不证明链路已运行；后续训练、CPU 推理运行情况另存实际 E 记录。

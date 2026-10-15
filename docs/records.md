@@ -11,14 +11,14 @@
 | 内容 | 位置与命名 | ID |
 | --- | --- | --- |
 | 每日工作日志 | docs/logs/YYYY/MM/YYYY-MM-DD.jsonl；.md为阅读摘要 | L20261011-01，日期加当日序号 |
-| 小节任务卡、资料待补清单、实验想法、修改意见 | docs/ch03/03-02-黄章磊-工作记录.md；第四章对应 ch04 | T03-02-黄章磊 |
-| 正式资料索引 | docs/references/ch03/00-资料索引.md | 来源卡 ID |
-| 来源卡与阅读笔记 | docs/references/ch03/notes/03-02-资料笔记.md，可含多张卡 | S03-黄章磊-001 |
-| AI 运行记录 | docs/references/ch03/ai-records/A03-02-20261011-01/ | A03-02-20261011-01 |
-| 正式实验计划、执行记录与报告 | reports/ch03/E03-02-20261011-01/ | E03-02-20261011-01 |
-| 试读、复现、审查记录 | 对应工作笔记；实验运行检查放对应 E 目录 | R03-02-20261011-01 |
-| 模型信息卡 | 03-transfer-learning/docs/model-card.md | 模型版本及实验 ID |
-| 原始参考资料 | docs/references/ch03/originals/ | 索引登记位置与 SHA256 |
+| 小节任务卡、资料待补清单、实验想法、修改意见 | docs/ch02/02-08-黄章磊-工作记录.md；第四章对应 ch04 | T02-08-黄章磊 |
+| 正式资料索引 | docs/references/ch02/00-资料索引.md | 来源卡 ID |
+| 来源卡与阅读笔记 | docs/references/ch02/notes/02-08-资料笔记.md，可含多张卡 | S02-黄章磊-001 |
+| AI 运行记录 | docs/references/ch02/ai-records/A02-08-20261011-01/ | A02-08-20261011-01 |
+| 正式实验计划、执行记录与报告 | reports/ch02/E02-08-20261011-01/ | E02-08-20261011-01 |
+| 试读、复现、审查记录 | 对应工作笔记；实验运行检查放对应 E 目录 | R02-08-20261011-01 |
+| 模型信息卡 | 02-onnx-baseline/docs/model-card.md | 模型版本及实验 ID |
+| 原始参考资料 | docs/references/ch02/originals/ | 索引登记位置与 SHA256 |
 | 完整运行输出、大数据及权重 | .local/runs/、.local/datasets/、.local/models/ | 同一 E 或模型版本 ID |
 
 其他节、第四章替换章、节号即可。来源原文件在多节间只保存一份；索引和笔记引用稳定来源 ID。首次正文、任务卡、实验计划按实际需要创建，初始化不批量产生空表单。

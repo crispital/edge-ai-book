@@ -6,8 +6,11 @@
 | --- | --- |
 | 每日工作日志 | `docs/logs/YYYY/MM/YYYY-MM-DD.jsonl`及同名Markdown摘要 |
 | 2.6/2.7提纲或正文 | `docs/ch02/02-06-...`、`docs/ch02/02-07-...` |
+| 4.5提纲或正文 | `docs/ch04/04-05-...` |
 | 来源索引与阅读笔记 | `docs/references/ch02/00-资料索引.md`、`notes/` |
+| 4.5来源索引与阅读笔记 | `docs/references/ch04/00-资料索引.md`、`notes/` |
 | 实验计划与报告 | `reports/ch02/E02-07-YYYYMMDD-01/` |
+| 4.5实验计划与报告 | `reports/ch04/E04-05-YYYYMMDD-01/` |
 | 模型版本记录 | `02-onnx-baseline/docs/model-version.md` |
 | 本地大文件 | `02-onnx-baseline/data/`、`model/`、`outputs/` |
 

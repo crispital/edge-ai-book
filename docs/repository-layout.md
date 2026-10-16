@@ -10,10 +10,14 @@ edge-ai-book/
 │   └── samples/      可共享的小样例或清单
 ├── docs/
 │   ├── ch02/         2.6、2.7提纲与正文
+│   ├── ch04/         4.5提纲与正文
 │   ├── references/ch02/
+│   ├── references/ch04/
 │   └── logs/
 ├── assets/ch02/      图表及可编辑源文件
+├── assets/ch04/      4.5图表及可编辑源文件
 ├── reports/ch02/     实验计划、报告与可共享证据
+├── reports/ch04/     4.5实验计划、报告与可共享证据
 ├── datasets/         数据来源与清单说明
 ├── compatibility/    环境版本记录
 └── common/           出现真实复用需求后提取的公共代码

@@ -1,0 +1,35 @@
+digraph MNIST_PyTorch_FX {
+rankdir=TB;
+nodesep=0.18;
+ranksep=0.10;
+graph [margin=0.03, pad=0.06];
+node [fontname="Arial", fontsize=10, margin="0.18,0.03", penwidth=0.8];
+edge [arrowsize=0.55, penwidth=0.8];
+x [label="{x|x|shape=(1, 1, 28, 28)}", shape=record, fillcolor="AliceBlue", style="filled,rounded", fontcolor="#000000"];
+conv1 [label="{conv1|Conv2d|shape=(1, 32, 26, 26)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+relu [label="{relu|relu|shape=(1, 32, 26, 26)}", shape=record, fillcolor=Wheat1, style="filled,rounded", fontcolor="#000000"];
+conv2 [label="{conv2|Conv2d|shape=(1, 64, 24, 24)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+relu_1 [label="{relu_1|relu|shape=(1, 64, 24, 24)}", shape=record, fillcolor=Wheat1, style="filled,rounded", fontcolor="#000000"];
+max_pool2d [label="{max_pool2d|max_pool2d|shape=(1, 64, 12, 12)}", shape=record, fillcolor=Khaki1, style="filled,rounded", fontcolor="#000000"];
+dropout1 [label="{dropout1|Dropout|shape=(1, 64, 12, 12)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+flatten [label="{flatten|flatten|shape=(1, 9216)}", shape=record, fillcolor=Thistle1, style="filled,rounded", fontcolor="#000000"];
+fc1 [label="{fc1|Linear|shape=(1, 128)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+relu_2 [label="{relu_2|relu|shape=(1, 128)}", shape=record, fillcolor=Wheat1, style="filled,rounded", fontcolor="#000000"];
+dropout2 [label="{dropout2|Dropout|shape=(1, 128)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+fc2 [label="{fc2|Linear|shape=(1, 10)}", shape=record, fillcolor=LemonChiffon1, style="filled,rounded", fontcolor="#000000"];
+log_softmax [label="{log_softmax|log_softmax|shape=(1, 10)}", shape=record, fillcolor=Thistle3, style="filled,rounded", fontcolor="#000000"];
+output [label="{output|output|shape=(1, 10)}", shape=record, fillcolor=PowderBlue, style="filled,rounded", fontcolor="#000000"];
+x -> conv1;
+conv1 -> relu;
+relu -> conv2;
+conv2 -> relu_1;
+relu_1 -> max_pool2d;
+max_pool2d -> dropout1;
+dropout1 -> flatten;
+flatten -> fc1;
+fc1 -> relu_2;
+relu_2 -> dropout2;
+dropout2 -> fc2;
+fc2 -> log_softmax;
+log_softmax -> output;
+}

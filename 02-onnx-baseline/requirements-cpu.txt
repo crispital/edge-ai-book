@@ -1,0 +1,9 @@
+# 2026-10-17读取的已有CPU实验依赖版本，不是全部设备的支持范围。
+# 已有torch和torchvision运行构建分别为2.14.1+cpu、0.29.1+cpu。
+# 此列表不强制选择安装源；收件人需选与Python和设备匹配的CPU发行包。
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.5.4
+onnx==1.23.2
+onnxruntime==1.31.0
+onnxscript==0.7.2

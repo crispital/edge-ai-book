@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "delivery_date": "2026-10-17",
+  "release": "初版 v0.1",
+  "branch": "feature/02-06-02-07-04-05-delivery-20261017",
+  "base_commit": "e464bda174a1b855097ffc2f33e067304e27b3cd",
+  "scope": [
+    "2.6正文及配套材料",
+    "2.7正文及配套材料",
+    "4.5提纲及资料"
+  ],
+  "hash_mode": "sha256_bytes",
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 1218,
+      "sha256": "43c60aa6e8c1cadd4d00f1aba598c8125a8893727dd19141ca9848be4b2e2228"
+    },
+    {
+      "path": "00-提交说明.md",
+      "size_bytes": 3970,
+      "sha256": "62cd9a1789f12f6eef7eb296b52415f239f76f6e94a18838c4235de47cb7470d"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size_bytes": 2613,
+      "sha256": "90017f78dd807d3c6f3a715d16b76c754733e3c9194bdf9529e5702e83a9b182"
+    },
+    {
+      "path": "第一阶段/docs/SPEC.md",
+      "size_bytes": 4760,
+      "sha256": "06ead78af0f793a5aa4ed3fd92578076f616966ac2dff98e8bc311ff77b78b5b"
+    },
+    {
+      "path": "docs/current-tasks.md",
+      "size_bytes": 1582,
+      "sha256": "a9d772335fba2c9bf4e25d29b87ac51d613598e173036860675531d6c5ea8c83"
+    },
+    {
+      "path": "docs/repository-layout.md",
+      "size_bytes": 1454,
+      "sha256": "5840f06f2eb206b3849794e07e203a3028b391848b0e4f6ed48bc054c54ebc17"
+    },
+    {
+      "path": "docs/publisher-guidelines.md",
+      "size_bytes": 9956,
+      "sha256": "ff17bea77a2bad7ee09dda748ac67a83ec59be95641649d419e1f7a068fc4847"
+    },
+    {
+      "path": "02-onnx-baseline/README.md",
+      "size_bytes": 5142,
+      "sha256": "8d61bced143adc704b94f8bcfb2ae2c8c6de941b4157e70293a64eac9832c335"
+    },
+    {
+      "path": "02-onnx-baseline/requirements-cpu.txt",
+      "size_bytes": 357,
+      "sha256": "d64053bd3d7e13fc52cb65b8a6e33a735dfe5d3f1ee9003d6f8c1f7f7c964078"
+    },
+    {
+      "path": "02-onnx-baseline/src/main.py",
+      "size_bytes": 5659,
+      "sha256": "63313e1a3de31525057837d540237599e5c52c5625de8a385aaaab09021df2fa"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/export_onnx.py",
+      "size_bytes": 3596,
+      "sha256": "40881d291f51ab60b3d55b5c2ec90bed64c2e6f9d8edeeec5f7f8a68904574b7"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/compare_outputs.py",
+      "size_bytes": 4882,
+      "sha256": "fe87841238013e726d3992a67163795eacc1a04a2b12102639bb1d88efda1c96"
+    },
+    {
+      "path": "02-onnx-baseline/docs/model-version.md",
+      "size_bytes": 4640,
+      "sha256": "bbada58c6f64f3b174f6bc5fb10259ea361b92cb02dfd10ba2001aca7994555f"
+    },
+    {
+      "path": "docs/ch02/README.md",
+      "size_bytes": 1312,
+      "sha256": "3263be4ef30a74eb0f185e64377e1312fa08cf1c46a7624427f44f7959188848"
+    },
+    {
+      "path": "docs/ch02/02-06-计算图算子与模型结构-v0.1.md",
+      "size_bytes": 11762,
+      "sha256": "155e5fabeceb8446ce2077b9a63c5bbacfc1f0bdd7fef0faaa637823603e0d9f"
+    },
+    {
+      "path": "docs/ch02/02-07-PyTorch模型导出ONNX-v0.1.md",
+      "size_bytes": 14496,
+      "sha256": "7d9fc7b1cdcd1c8d8b080bd26576be36738ce2b7f7fa3824fa2880f10e3d4ee3"
+    },
+    {
+      "path": "docs/ch02/02-06-工作记录.md",
+      "size_bytes": 1095,
+      "sha256": "fdea35816806258a8263564c80ad77f76ae8e7a4e4107fda63f7b585bf6b217a"
+    },
+    {
+      "path": "docs/ch02/02-07-工作记录.md",
+      "size_bytes": 1137,
+      "sha256": "a710a26529439253da33de4f670cce3ce9b9b895024e31de8d2eac179835ce23"
+    },
+    {
+      "path": "docs/ch02/ch02_terms_26_27.md",
+      "size_bytes": 3504,
+      "sha256": "8724e6d60dd5dc8150d9df70043146b31bd6f0de6f7913d5e4e599e5f8f94eaf"
+    },
+    {
+      "path": "docs/ch02/outlines/02-06-计算图算子与模型结构-提纲及资料任务.md",
+      "size_bytes": 3031,
+      "sha256": "a1918d33e70ebf4275e10c339c9864f445402213619a45b35e0fb07abf517bfd"
+    },
+    {
+      "path": "docs/ch02/outlines/02-07-PyTorch模型导出ONNX-提纲及资料任务.md",
+      "size_bytes": 3102,
+      "sha256": "ba3367539da3e9cbb2bbb5b9a2973dd486cb5478320ff1a910501b11240507d4"
+    },
+    {
+      "path": "docs/ch04/README.md",
+      "size_bytes": 826,
+      "sha256": "0e3028946ed5d12d96faf51b31703bb94ff093117e461e673a4a2e7322d51d03"
+    },
+    {
+      "path": "docs/ch04/04-05-工作记录.md",
+      "size_bytes": 1069,
+      "sha256": "db1a67002d273d8ccc9c3be050d6ee06cf0c5883df3dd2ea00aaf743a588c27b"
+    },
+    {
+      "path": "docs/ch04/outlines/04-05-模型剪枝-提纲及资料任务.md",
+      "size_bytes": 4094,
+      "sha256": "8513afe1b99306d87fe3c254050d3270adb96971018b9272406b7c35723e60e6"
+    },
+    {
+      "path": "docs/references/ch02/00-资料索引.md",
+      "size_bytes": 3185,
+      "sha256": "f254432c2444d0a7df269e069c25cccd5ca7b4cc9471ca57decfc1080d731257"
+    },
+    {
+      "path": "docs/references/ch02/notes/02-06-资料卡.md",
+      "size_bytes": 5180,
+      "sha256": "e5a4730d3788497f43ed9ad7ff05c8abfcda7789cb5dceec446f82a32e6606c2"
+    },
+    {
+      "path": "docs/references/ch02/notes/02-07-资料卡.md",
+      "size_bytes": 5131,
+      "sha256": "41a58f3ac14deb922564e876afd0d8112b999e67710d0fbc21debb4bc31850a6"
+    },
+    {
+      "path": "docs/references/ch02/notes/MNIST基准.md",
+      "size_bytes": 1211,
+      "sha256": "1f1275a943dfa2a2c53bd36c8d1a3544c609eca45ec555c5ab20a7a4f0d50f6d"
+    },
+    {
+      "path": "docs/references/ch02/notes/MNIST项目源码.md",
+      "size_bytes": 2561,
+      "sha256": "bbd60f327bc89792af37e1f2338f506e643c2a92561ab62ad9d842ef033480e2"
+    },
+    {
+      "path": "docs/references/ch04/00-资料索引.md",
+      "size_bytes": 2500,
+      "sha256": "8023478bfbe5c54d0a67fce77ec7902c715252d483648c67bdb217223e4c0094"
+    },
+    {
+      "path": "docs/references/ch04/notes/04-05-资料卡.md",
+      "size_bytes": 9232,
+      "sha256": "dd593cf89ec30290bef614cff054b5b605bc212aa43a775e0475a9e846e546cc"
+    },
+    {
+      "path": "assets/ch02/README.md",
+      "size_bytes": 711,
+      "sha256": "d1bdad808c3dd56b1a0bf4a61c504be03315233095fe8429e783847ae1b06936"
+    },
+    {
+      "path": "assets/ch02/fig_02_06_01_图注与来源.md",
+      "size_bytes": 3811,
+      "sha256": "4823fd82082189cecfc6768a50d0da300008b39f1dd3c86be7896f27e03a049c"
+    },
+    {
+      "path": "assets/ch02/fig_02_06_01_ONNX_Netron.png",
+      "size_bytes": 66148,
+      "sha256": "476e75541d938d416ae4b3a559c1dc879070696f005fc836bee3fa280f27f1e8"
+    },
+    {
+      "path": "assets/ch02/fig_02_06_01_PyTorch_FX.dot",
+      "size_bytes": 2310,
+      "sha256": "34e9c37ce1b3e37be553b6da43dfeec678a8f327707bf26c215bb0053b468905"
+    },
+    {
+      "path": "assets/ch02/fig_02_06_01_PyTorch_FX.png",
+      "size_bytes": 120330,
+      "sha256": "b5a4c4179fcdb8c3c50e4ff645d01ab6294bbe77c1526d21b472147f8460d6b6"
+    },
+    {
+      "path": "assets/ch02/fig_02_06_01_PyTorch与ONNX对照.png",
+      "size_bytes": 178270,
+      "sha256": "c908151e41a55f240629f6f41760b6535cd6b89a7b42ad4cbc06060f660ae6e6"
+    },
+    {
+      "path": "assets/ch02/render_model_graphs.cjs",
+      "size_bytes": 4716,
+      "sha256": "32e12fbec9c8fde3d0587d637b619ec3b22fee4a6c50cc4f1335cd9de9af2f61"
+    },
+    {
+      "path": "reports/ch02/W02-06-20261016.md",
+      "size_bytes": 9846,
+      "sha256": "3c6100feef8ac3f508a55c922a6bbe6a33ab9c8e9be8d1b517aea17ea4ba9a8f"
+    },
+    {
+      "path": "reports/ch02/W02-07-20261016.md",
+      "size_bytes": 9964,
+      "sha256": "f62f5321c4cfc4c2e9f0c437b19b205027bc72788166e4de80c125c167e326d8"
+    },
+    {
+      "path": "reports/ch02/E02-07-20261016-01/README.md",
+      "size_bytes": 7131,
+      "sha256": "22034bb6db3d958286d9b92ea9dc8d4500008e04d9c1d39bc06a089bac9817a2"
+    }
+  ],
+  "excluded": [
+    "4.5概念正文",
+    "模型权重",
+    "ONNX",
+    "完整数据集",
+    "运行产物（Git不含；ZIP另附两个固定样本归档）",
+    "虚拟环境、缓存、凭据、.git及内部PDF"
+  ],
+  "runtime_evidence": "M02-004 / E02-07-20261016-01；本轮未运行模型"
+}

@@ -20,6 +20,7 @@
 
 - 正文：`docs/ch02/02-06-标题-v0.1.md`、`docs/ch02/02-07-标题-v0.1.md`；
 - 第四章正文：`docs/ch04/04-05-标题-v0.1.md`；
+- 提纲及资料任务：分别放`docs/ch02/outlines/`和`docs/ch04/outlines/`，不与正文混放；
 - 插图：`assets/ch02/fig_02_06_01_含义.svg`；
 - 第四章插图：`assets/ch04/fig_04_05_01_含义.svg`；
 - 实验：`reports/ch02/E02-07-YYYYMMDD-01/`；

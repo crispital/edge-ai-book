@@ -5,8 +5,10 @@
 | 内容 | 位置与命名示例 |
 | --- | --- |
 | 每日工作日志 | `docs/logs/YYYY/MM/YYYY-MM-DD.jsonl`及同名Markdown摘要 |
-| 2.6/2.7提纲或正文 | `docs/ch02/02-06-...`、`docs/ch02/02-07-...` |
-| 4.5提纲或正文 | `docs/ch04/04-05-...` |
+| 2.6/2.7正文 | `docs/ch02/02-06-...`、`docs/ch02/02-07-...` |
+| 2.6/2.7提纲及资料任务 | `docs/ch02/outlines/02-06-...`、`docs/ch02/outlines/02-07-...` |
+| 4.5正文 | `docs/ch04/04-05-...` |
+| 4.5提纲及资料任务 | `docs/ch04/outlines/04-05-...` |
 | 来源索引与阅读笔记 | `docs/references/ch02/00-资料索引.md`、`notes/` |
 | 4.5来源索引与阅读笔记 | `docs/references/ch04/00-资料索引.md`、`notes/` |
 | 实验计划与报告 | `reports/ch02/E02-07-YYYYMMDD-01/` |

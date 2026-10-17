@@ -7,6 +7,8 @@
 !/README.md
 !/CONTRIBUTING.md
 !/CHANGELOG.md
+!/00-提交说明.md
+!/交付清单.json
 !/.github/
 !/docs/
 !/02-onnx-baseline/

@@ -17,3 +17,8 @@
 *.jpg binary
 *.jpeg binary
 *.xlsx binary
+*.pt binary
+*.onnx binary
+*.npz binary
+/02-onnx-baseline/data/MNIST/raw/* binary
+/02-onnx-baseline/outputs/regression_20261016_01/summary.json -text whitespace=cr-at-eol

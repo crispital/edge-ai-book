@@ -61,3 +61,5 @@ git diff --cached
 ```
 
 不得上传完整数据、权重、ONNX、运行输出、凭据、虚拟环境或缓存，也不得用`git add -f`绕过规则。
+
+例外：作者2026-10-22明确要求上传第二章复现材料，本次只允许`.gitignore`末尾列出的四个MNIST IDX文件、`mnist_cnn.pt`、`mnist_cnn.onnx`及两份已有回归输出；版本及SHA256见`02-onnx-baseline/docs/reproduction-files.json`。其他产物仍按原规则处理，不使用强制添加。

@@ -76,3 +76,25 @@
 **/*.tmp
 **/*.bak
 **/~$*
+
+# 作者2026-10-22明确授权上传的固定复现文件；其他产物继续忽略。
+!/02-onnx-baseline/data/
+/02-onnx-baseline/data/*
+!/02-onnx-baseline/data/MNIST/
+/02-onnx-baseline/data/MNIST/*
+!/02-onnx-baseline/data/MNIST/raw/
+/02-onnx-baseline/data/MNIST/raw/*
+!/02-onnx-baseline/data/MNIST/raw/train-images-idx3-ubyte
+!/02-onnx-baseline/data/MNIST/raw/train-labels-idx1-ubyte
+!/02-onnx-baseline/data/MNIST/raw/t10k-images-idx3-ubyte
+!/02-onnx-baseline/data/MNIST/raw/t10k-labels-idx1-ubyte
+!/02-onnx-baseline/model/
+/02-onnx-baseline/model/*
+!/02-onnx-baseline/model/mnist_cnn.pt
+!/02-onnx-baseline/outputs/
+/02-onnx-baseline/outputs/*
+!/02-onnx-baseline/outputs/mnist_cnn.onnx
+!/02-onnx-baseline/outputs/regression_20261016_01/
+/02-onnx-baseline/outputs/regression_20261016_01/*
+!/02-onnx-baseline/outputs/regression_20261016_01/outputs.npz
+!/02-onnx-baseline/outputs/regression_20261016_01/summary.json

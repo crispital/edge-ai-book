@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-22",
+  "authorization": "作者明确要求上传代码、权重和数据；只对本清单固定文件放行。",
+  "source": "MNIST四个IDX文件从作者原工程02-onnx-baseline/data/MNIST/raw复制；权重、ONNX和回归输出沿用仓库本地既有文件，未重新训练或导出。",
+  "code": [
+    "02-onnx-baseline/src/main.py",
+    "02-onnx-baseline/scripts/export_onnx.py",
+    "02-onnx-baseline/scripts/compare_outputs.py"
+  ],
+  "files": [
+    {
+      "path": "02-onnx-baseline/data/MNIST/raw/train-images-idx3-ubyte",
+      "bytes": 47040016,
+      "sha256": "ba891046e6505d7aadcbbe25680a0738ad16aec93bde7f9b65e87a2fc25776db"
+    },
+    {
+      "path": "02-onnx-baseline/data/MNIST/raw/train-labels-idx1-ubyte",
+      "bytes": 60008,
+      "sha256": "65a50cbbf4e906d70832878ad85ccda5333a97f0f4c3dd2ef09a8a9eef7101c5"
+    },
+    {
+      "path": "02-onnx-baseline/data/MNIST/raw/t10k-images-idx3-ubyte",
+      "bytes": 7840016,
+      "sha256": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7"
+    },
+    {
+      "path": "02-onnx-baseline/data/MNIST/raw/t10k-labels-idx1-ubyte",
+      "bytes": 10008,
+      "sha256": "ff7bcfd416de33731a308c3f266cc351222c34898ecbeaf847f06e48f7ec33f2"
+    },
+    {
+      "path": "02-onnx-baseline/model/mnist_cnn.pt",
+      "bytes": 4803113,
+      "sha256": "9d23854dcf95327f9996bcd583909b2778a6c475372cd79ab36ca54d26ccbf64"
+    },
+    {
+      "path": "02-onnx-baseline/outputs/mnist_cnn.onnx",
+      "bytes": 4810666,
+      "sha256": "1601b8478b865ae40acfdf4c727cccb298f463a5ff754931112277e658a8b3c7"
+    },
+    {
+      "path": "02-onnx-baseline/outputs/regression_20261016_01/outputs.npz",
+      "bytes": 4944,
+      "sha256": "a422d7c022e69d95679613dc08a51db7868d670af6b9f0034721f43973a2b56f"
+    },
+    {
+      "path": "02-onnx-baseline/outputs/regression_20261016_01/summary.json",
+      "bytes": 2800,
+      "sha256": "3b01366d9ebed984f8a69b3b08769775e37790b631db476df3ab2132c5fcdb91"
+    }
+  ],
+  "total_bytes": 64571571,
+  "exclusions": [
+    "虚拟环境",
+    "缓存",
+    "凭据",
+    "重复.gz数据",
+    "其他实验输出",
+    "4.5未交付草稿"
+  ],
+  "notes": [
+    "旧ZIP及其清单保持原样，本清单仅描述2026-10-22新增复现文件。",
+    "不对数据和作者模型另行授予许可；来源与使用条件沿用原资料，不伪造授权。"
+  ]
+}

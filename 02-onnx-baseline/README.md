@@ -15,6 +15,15 @@
 - `outputs/`：本地ONNX及检查输出。
 
 后三个目录不进入Git。
+2026-10-22起，按作者明确授权，固定复现文件作为例外纳入当前交付分支：四个完整MNIST IDX文件、原权重、原始ONNX和已有10样本回归输出。仅放行清单文件，其他运行产物继续忽略；大小、来源及SHA256见[复现文件清单](docs/reproduction-files.json)。上句“不进入Git”是原始通用规则，本次例外以本段为准，历史实验报告不追改。
+
+取得本分支后，数据已位于`data/MNIST/raw/`，不需要重新下载或训练即可执行原模型数值对比。在仓库根目录运行，使用已安装对应依赖的Python：
+
+```powershell
+python -B 02-onnx-baseline/scripts/compare_outputs.py --output-dir 02-onnx-baseline/outputs/regression_local
+```
+
+输出目录必须是尚不存在的新目录；已有ONNX无需重复导出。数据沿用原工程中的MNIST文件，未改动样本、标签或划分；来源说明见[MNIST资料卡](../docs/references/ch02/notes/MNIST基准.md)。
 
 作者提供的权重已保存为本地`model/mnist_cnn.pt`；来源、文件校验值和源码匹配结果见[模型版本记录](docs/model-version.md)。
 

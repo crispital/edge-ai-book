@@ -46,6 +46,8 @@
 
 ## Git
 
+2026-10-22作者明确授权将第二章既有代码、权重、ONNX、完整MNIST四个IDX文件及已有回归结果上传远程。本次仅对`.gitignore`列出的固定复现文件作例外，清单见`02-onnx-baseline/docs/reproduction-files.json`；不开放其他模型、数据、缓存或凭据，也不改变历史交付包的范围。
+
 唯一远程仓库为`https://github.com/crispital/edge-ai-book.git`。不建立与原克隆仓库的Fork或upstream关系，也不安排回合并。
 
 提交首行格式为`YYYYMMDD | 中文事件`，随后按`CONTRIBUTING.md`填写八项说明。不得虚构运行、审核或交接。

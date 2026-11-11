@@ -1,0 +1,314 @@
+{
+  "date": "2026-11-11",
+  "source_packages": {
+    "第二章初版.zip": "43884db5e53c31ee58606a4773cc9e48cffd4e147b9746661bd7c1c823e7bae2",
+    "d2el-release-20261107(2).zip": "66324c0f4c51d30e017171e65f21da12cb9245c20e547ebaa12031ea9e89dfee"
+  },
+  "files": [
+    {
+      "path": "assets/ch02/initial-draft/fig-2-10.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-10.png",
+      "transformation": "byte-for-byte",
+      "bytes": 309974,
+      "sha256": "e61f514a0c4a9c9d4ad18a5e6bea9a688787fda2890163d4f3fbbcdd707b0ffd",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-11.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-11.png",
+      "transformation": "byte-for-byte",
+      "bytes": 269484,
+      "sha256": "4514929ddd2557ecec4156bde15ed0dbf40570228e1e6fee10d75cb26ba692af",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-12.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-12.png",
+      "transformation": "byte-for-byte",
+      "bytes": 192944,
+      "sha256": "03383e1ac5e51178bdf7ba906b39889f3fa8a52872a196afdaaabbd456315e8b",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-13.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-13.png",
+      "transformation": "byte-for-byte",
+      "bytes": 404958,
+      "sha256": "5f9fda520299d3bfb19f12aefefe7f4af42d572aa79bf89a8cff67077c9311d5",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-14.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-14.png",
+      "transformation": "byte-for-byte",
+      "bytes": 105712,
+      "sha256": "c72e21c7b2d48e3594e43f6b5f70e8a899ae2aa1e29efff115b178cb807f73b0",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-15.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-15.png",
+      "transformation": "byte-for-byte",
+      "bytes": 75130,
+      "sha256": "005875c657a50c08bf7b3e5d697a0b38567858205104c1212d7dbf4c93ba9518",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-16.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-16.png",
+      "transformation": "byte-for-byte",
+      "bytes": 89159,
+      "sha256": "01875aa2cc56105ab3c92e88d6ab57d4eb0612b1fbac029c6f1f0ce5df048a98",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-17.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-17.png",
+      "transformation": "byte-for-byte",
+      "bytes": 94391,
+      "sha256": "5d8a43f40388720b0b8d9469035c54c84dea7555bd983c159340f2d1b077ac21",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-18.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-18.png",
+      "transformation": "byte-for-byte",
+      "bytes": 86629,
+      "sha256": "accda36a92294fa905e77fde0877b8c66d7589d2d0a1b3013cc716cecf3c8982",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-19.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-19.png",
+      "transformation": "byte-for-byte",
+      "bytes": 73379,
+      "sha256": "17b62c66be19e0df11948dca16cd9874a2a0c352675ceebbc197f1d555ea5c80",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-20.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-20.png",
+      "transformation": "byte-for-byte",
+      "bytes": 300298,
+      "sha256": "d102c6ddca90e6f63783d3ff4d6a59d08edce2d507b271f2eddd9a89cf1f048f",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-21.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-21.png",
+      "transformation": "byte-for-byte",
+      "bytes": 174740,
+      "sha256": "ea812a30aea718207b8a585058c5591a6c07c7d8a66c6d3de572bab0623b9ff6",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-22.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-22.png",
+      "transformation": "byte-for-byte",
+      "bytes": 187973,
+      "sha256": "65d5d8263e604ac21b0936ccbd783da1f73ce8bf984b6bd3bf5c822ddff8af26",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/fig-2-23.png",
+      "source": "第二章初版.zip/第二章初版/asset/fig-2-23.png",
+      "transformation": "byte-for-byte",
+      "bytes": 203873,
+      "sha256": "c7d8b9a2949653ecc3e6c4d99c88a2831c947868df16f450a2568e3369fab5e9",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "assets/ch02/initial-draft/mnist_test_0000.png",
+      "source": "第二章初版.zip/第二章初版/asset/mnist_test_0000.png",
+      "transformation": "byte-for-byte",
+      "bytes": 249,
+      "sha256": "b810ffb1e5336b506a0ac0d43c6c8033ddd60046107e23edf9f33602a7fade97",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "docs/references/ch02/materials-20261111/第二章初版.md",
+      "source": "第二章初版.zip/第二章初版/第二章.md",
+      "transformation": "UTF-8 and image relative paths",
+      "bytes": 118556,
+      "sha256": "ac651a7c92fbea0075d59ead02ef3a6ce750bc91731f3a11b8ce93a9686b9ab7",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "docs/references/ch02/materials-20261111/轻量改稿说明.md",
+      "source": "材料包/prompt.md",
+      "transformation": "byte-for-byte; normalize CRLF/CR to LF",
+      "bytes": 2240,
+      "sha256": "a6aaf51f4b50f5f5df8fd298f2cb21dc897665e51aa3ac2b1d4169c7e13e5eb8",
+      "source_sha256": "455a4d7a66f5abe2deda9c1fc6c0ccf686f0f2d90e5ff79b155c9d18aee15e4e",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "docs/ch02/02-06-计算图算子与模型结构-v0.1.md",
+      "source": ".local/materials/ch02/第二章初版/ch02_sec06_light_edit.md",
+      "transformation": "body before separator; image relative paths",
+      "bytes": 14697,
+      "sha256": "454f2fa61962d57b5149014efe28c75caa1284c9d62b34ef33a8df6d6ca8599e",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "docs/references/ch02/materials-20261111/2.6轻改说明.md",
+      "source": ".local/materials/ch02/第二章初版/ch02_sec06_light_edit.md",
+      "transformation": "notes after separator",
+      "bytes": 657,
+      "sha256": "878f86ef103a5ada1f88ba849b69aa81b84e3dc766dfc1708cb32f44d590434b",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/02_07_导出与基线推理.py",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/02_07_导出与基线推理.py",
+      "transformation": "byte-for-byte",
+      "bytes": 887,
+      "sha256": "f9284c4166f3b5f9dbfd8cdf2def7468c19c702e8c8f265b7bb419eab77acc69",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/模型工具.py",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/模型工具.py",
+      "transformation": "byte-for-byte",
+      "bytes": 1680,
+      "sha256": "d6896f17146161b4c74b009d824941f5d326218e36f5ecd22491d840c592a11d",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/requirements-cpu.txt",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/requirements-cpu.txt",
+      "transformation": "byte-for-byte",
+      "bytes": 113,
+      "sha256": "59b05b4330adc2d3578d466d7ad4bb1cd03d5b1e3f19eef3e1ed8733c0876d12",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/official_mnist/main.py",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/official_mnist/main.py",
+      "transformation": "normalize CRLF/CR to LF; remove trailing whitespace; source logic unchanged",
+      "bytes": 5391,
+      "sha256": "b69c88a54e129ff0d8ca21eb0fc99dea61b98e4b2edf46d292faed33814a6a7e",
+      "source_sha256": "3341acc9d4ec6b07843f7614a7e97afea7a4696ed2d30372be7454bbcef27fae",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/official_mnist/LICENSE",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/official_mnist/LICENSE",
+      "transformation": "byte-for-byte; normalize CRLF/CR to LF",
+      "bytes": 1520,
+      "sha256": "7e5dc9b5cf276166c4a0678d33e53b14e3d7ef47eee9356ab786c4ba45414efd",
+      "source_sha256": "d57c9e197084542195f98441d1e5dbfcde2a803709821b37445318e9587d5cbc",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/来源说明.md",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/来源说明.md",
+      "transformation": "byte-for-byte",
+      "bytes": 852,
+      "sha256": "d877979ea4cd4c32c25364e340419969c4408b7f876ac35acf62b8488c6ed3e0",
+      "hash_mode": "sha256_utf8_lf"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0000.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0000.png",
+      "transformation": "byte-for-byte",
+      "bytes": 249,
+      "sha256": "b810ffb1e5336b506a0ac0d43c6c8033ddd60046107e23edf9f33602a7fade97",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0001.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0001.png",
+      "transformation": "byte-for-byte",
+      "bytes": 280,
+      "sha256": "52549bd621af45d5f1ab260575c188a99e923a7ea98b4755081a85c56a6a85d0",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0002.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0002.png",
+      "transformation": "byte-for-byte",
+      "bytes": 193,
+      "sha256": "8e17a6a60feaee1ee55298c8dae2ac26854a07555d1d425c2492886cae178155",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0003.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0003.png",
+      "transformation": "byte-for-byte",
+      "bytes": 295,
+      "sha256": "c2599743473c4f7412b0c851c480e925b1282e8e9bf444d3a01c4c4417aba446",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0004.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0004.png",
+      "transformation": "byte-for-byte",
+      "bytes": 277,
+      "sha256": "2a245788620da246af1d0c491e5d170785dd13c0e2582151c700da8677b1a703",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0005.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0005.png",
+      "transformation": "byte-for-byte",
+      "bytes": 210,
+      "sha256": "8548e5350c51423e652da0a6aa16aebf48bf8745bc68e18e8030bfbee7e66010",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0006.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0006.png",
+      "transformation": "byte-for-byte",
+      "bytes": 267,
+      "sha256": "994a50b82883fd878ad31d09b58d23e76e69e96022bacecf92f3f6013d526023",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0007.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0007.png",
+      "transformation": "byte-for-byte",
+      "bytes": 268,
+      "sha256": "f49f9d78269268c43d6eb4dcb29577c89c4bcc1d9ac684b8c8e76f1ff326ec3d",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0008.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0008.png",
+      "transformation": "byte-for-byte",
+      "bytes": 285,
+      "sha256": "b2801078dee32f7251f47ac4db2b2c546db35fe358736e9ac6223bd1ecdf2b09",
+      "hash_mode": "sha256_bytes"
+    },
+    {
+      "path": "02-onnx-baseline/scripts/opset17/样例/mnist_test_0009.png",
+      "source": "d2el-release-20261107(2).zip/03-代码/第二章/样例/mnist_test_0009.png",
+      "transformation": "byte-for-byte",
+      "bytes": 313,
+      "sha256": "c07be9aa186db4a18981e538b2a4d2faee553969309a24929c3de5b2cd2c4314",
+      "hash_mode": "sha256_bytes"
+    }
+  ],
+  "local_only": [
+    {
+      "name": "phei_author_guide_2020.pdf",
+      "sha256": "595913e0c567a0606854c9545828b6ca489ebd10cc418ef30e7580f5cd68c36d",
+      "git_included": false
+    },
+    {
+      "name": "第一章 端侧人工智能概论_1.1至1.5整合_补充1.1-1.5参考文献+格式(2).pdf",
+      "sha256": "868c8f79d436fda81d0c0a9417adf80b064cb7f32acd209e15517d0b9e6d5385",
+      "git_included": false
+    },
+    {
+      "name": "hzl.pt",
+      "sha256": "c67f51ea3d3eec2730510d062e5344faf15d9ad5a87537d644dda23438f9a1e7",
+      "git_included": false
+    },
+    {
+      "name": "hzl.onnx",
+      "sha256": "be5f04249fc79902d79fa12ef4431605f020c961371f83fcb06b41e83483d7d0",
+      "git_included": false
+    }
+  ]
+}

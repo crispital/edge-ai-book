@@ -2,6 +2,8 @@
 
 本项目服务2.6和2.7：先读懂MNIST PyTorch模型的结构与张量形状，再导出ONNX并检查结构、接口和数值。
 
+2.7正文采用作者确认的[opset 17动态批次基线](docs/model-version.md#m02-005--27正文采用的opset-17基线)。本文下方的仓库内置脚本与运行记录对应原有固定批次基线。opset 17的可提交脚本与样本见[独立配套说明](scripts/opset17/README.md)，模型位置及校验值见模型版本记录。
+
 作者指定的模型源码已原样保存为[src/main.py](src/main.py)，读取位置、SHA256和静态说明见[M02-001](../docs/references/ch02/notes/MNIST项目源码.md)。本次仅复制源码。运行该脚本会进入训练流程；指定`--save-model`才保存权重，使用`--no-accel`选择CPU。
 
 ## 目录

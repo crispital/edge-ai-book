@@ -1,0 +1,9 @@
+torch==2.4.1
+torchvision==0.19.1
+numpy==1.23.5
+onnx==1.17.0
+onnxruntime==1.20.1
+pillow
+jupyter
+nbclient
+nbformat
